@@ -1,10 +1,10 @@
-$color-titre : #3C3B3B;
-$color-texte : #646464;
 $primary-color : #F4F4F4;
 $secondary-color : #FFFFFF;
+$tertiary-color : rgb(160, 160, 160);
+$title-color : #3C3B3B;
+$text-color : #646464;
 $hover-color : #2EBAAE;
 $border-color :rgba(160, 160, 160, 0.3);
-$color-bouton : rgb(160, 160, 160);
 $font : "Raleway", Helvetica, sans-serif;
 
 @mixin display($type) {
@@ -54,6 +54,9 @@ $font : "Raleway", Helvetica, sans-serif;
 .secondary-color{
     background-color : $secondary-color;
 }
+.tertiary-color{
+    color: $tertiary-color;
+}
 
 .hover-color:hover{
     color : $hover-color;
@@ -61,22 +64,50 @@ $font : "Raleway", Helvetica, sans-serif;
 .border-hover-color:hover{
     border-color: $hover-color;
 }
-.border-color{
 
+.border-none{
+    border: none;
 }
+.border{
+    border: 1px solid $border-color;
+}
+
+@mixin border($direction) {
+    .border-#{$direction} {
+        border-#{$direction} : 1px solid $border-color;
+    }
+}
+
+@include border(top);
+@include border(right);
+@include border(bottom);
+@include border(left);
+
+.border-bottom-dotted{
+    border-bottom: 1px dotted $border-color;
+}
+
+.border-2px{
+    border-width: 2px;
+}
+
 body{
     margin: 0;
 }
 header{
-    border: 1px solid $border-color;
     position: fixed;
     width: 100%;
     z-index: 1;
     height: 6vh;
 }
-h1, h2, h3, p, .bouton-font{
-    color: $color-titre;
-    font-family: $font ;
+.font{
+    font-family: $font;
+}
+.title-color{
+    color: $title-color;
+}
+.text-color{
+    color: $text-color;
 }
 
 h1{
@@ -93,7 +124,6 @@ h3{
     margin: 2vh 0;
 }
 p{
-   color: $color-texte;
    cursor: initial;
    font-size: 12px;
 }
@@ -116,27 +146,26 @@ button{
     height: 6vh;
     width: 15vw;
     font-size: 20px;
-    border: none;
-    border-left: 1px solid $border-color;
     background-color: transparent;
 }
 .bouton{
     background-color: transparent;
-    border: 2px solid $border-color;
     height: 7vh;
     width: 77vw;
     margin: 40px 0;
     font-weight: 800;
 }
 .bouton-retour{
-    color: $border-color;
     background-color: transparent;
-    border: 2px solid $border-color;
     height: 7vh;
     width: 77vw;
     font-weight: 800;
     cursor: auto;
 }
+.border-color{
+    color: $border-color;
+}
+
 .bouton-lireplus{
     height: 7vh;
 }
@@ -151,7 +180,6 @@ button{
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 3vh;
-    border-left: 1px solid $border-color ;
 }
   
 .texte-navbar{
@@ -161,7 +189,6 @@ button{
 }
 
 .div-navbar{
-    border-bottom: 1px solid $border-color;
     padding-bottom: 5vh;
 }
 .div-bouton-navbar{
@@ -177,12 +204,10 @@ button{
     font-weight: 700;
     font-size: 15px;
     width: 60vw;
-    border-bottom: 1px solid $border-color;
     padding-bottom: 2vw;
     margin-top: 5vh;
 }
 .fin-titre-navbar{
-    border: none;
     padding: initial;
 }
 .sous-titre-navbar{
@@ -195,13 +220,11 @@ button{
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: "\f002";
-    color: $color-bouton;
     position: absolute;
     padding: 12px 7px;
 }
 
 .champs-recherche{
-    border:1px solid $border-color;
     height: 5vh;
     width: 50vw;
     padding-left: 6vw;
@@ -217,29 +240,18 @@ button{
 }
 
 .grande-div{
-    border: 1px solid $border-color;
     border-top: transparent;
     padding-top: 10vh;
 }
 .div-blog{
     margin-bottom: 5vh;
-    border-top: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
 }
 
 .barre-div{
     width: 77vw;
-    border-top: 1px solid $border-color;
-}
-.raccourcie{
-    border-bottom: 1px dotted $border-color;
-}
-.raccourcie-dernier{
-    border-bottom: none;
 }
 .petit-blog{
     margin: 5vh 0;
-    border: 1px solid $border-color;
 }
 
 img{
@@ -304,9 +316,6 @@ img{
 }
 .texte-petit-blog{
     margin: 0 15px;
-}
-.color-grisclair{
-    color: $color-bouton;
 }
 .margin-fin{
     margin: 4vh 0;
@@ -381,8 +390,26 @@ img{
     @include flex-direction-responsive(column);
     @include flex-direction-responsive(row);
 
+    .border-none-resp{
+        border: none;
+    }
+
+    .border-resp{
+        border: 1px solid $border-color;
+    }
+    
+    @mixin border-responsive($direction) {
+        .border-resp-#{$direction} {
+            border-#{$direction} : 1px solid $border-color;
+        }
+    }
+    
+    @include border-responsive(top);
+    @include border-responsive(right);
+    @include border-responsive(bottom);
+    @include border-responsive(left);
+
     h1{
-        border-right: 1px solid $border-color;
         padding: 2vh 2vw;
     }
     .lorem:after{
@@ -401,7 +428,6 @@ img{
         content: "ADIPISCING";
     }
     .barre{
-        border-right: 1px solid $border-color;
         padding: 2px 2vw 2px 0;
     }
     .bouton-navbar{
@@ -409,9 +435,6 @@ img{
     }
     .margin-header{
         margin-right: 2vw;
-    }
-    .grande-div{
-        border: none;
     }
     .premiere-div{
         width: 24vw;
@@ -430,18 +453,11 @@ img{
     .contenue-deuxieme-div{
         width: 55vw;
     }
-    .div-blog{
-        border: 1px solid $border-color;
-    }
     .div-blog-fin{
         margin: auto;
     }
     .presentation-deuxieme-div{
-        border-bottom: 1px solid $border-color;
         padding: 0 2vw 0 4vw;
-    }
-    .texte-deuxieme-div{
-        border-right: 1px solid $border-color;
     }
     .texte-titre{
         text-align: initial;

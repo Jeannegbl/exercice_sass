@@ -54,6 +54,10 @@
   background-color: #FFFFFF;
 }
 
+.tertiary-color {
+  color: rgb(160, 160, 160);
+}
+
 .hover-color:hover {
   color: #2EBAAE;
 }
@@ -62,21 +66,59 @@
   border-color: #2EBAAE;
 }
 
+.border-none {
+  border: none;
+}
+
+.border {
+  border: 1px solid rgba(160, 160, 160, 0.3);
+}
+
+.border-top {
+  border-top: 1px solid rgba(160, 160, 160, 0.3);
+}
+
+.border-right {
+  border-right: 1px solid rgba(160, 160, 160, 0.3);
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgba(160, 160, 160, 0.3);
+}
+
+.border-left {
+  border-left: 1px solid rgba(160, 160, 160, 0.3);
+}
+
+.border-bottom-dotted {
+  border-bottom: 1px dotted rgba(160, 160, 160, 0.3);
+}
+
+.border-2px {
+  border-width: 2px;
+}
+
 body {
   margin: 0;
 }
 
 header {
-  border: 1px solid rgba(160, 160, 160, 0.3);
   position: fixed;
   width: 100%;
   z-index: 1;
   height: 6vh;
 }
 
-h1, h2, h3, p, .bouton-font {
-  color: #3C3B3B;
+.font {
   font-family: "Raleway", Helvetica, sans-serif;
+}
+
+.title-color {
+  color: #3C3B3B;
+}
+
+.text-color {
+  color: #646464;
 }
 
 h1 {
@@ -96,7 +138,6 @@ h3 {
 }
 
 p {
-  color: #646464;
   cursor: initial;
   font-size: 12px;
 }
@@ -123,14 +164,11 @@ button {
   height: 6vh;
   width: 15vw;
   font-size: 20px;
-  border: none;
-  border-left: 1px solid rgba(160, 160, 160, 0.3);
   background-color: transparent;
 }
 
 .bouton {
   background-color: transparent;
-  border: 2px solid rgba(160, 160, 160, 0.3);
   height: 7vh;
   width: 77vw;
   margin: 40px 0;
@@ -138,13 +176,15 @@ button {
 }
 
 .bouton-retour {
-  color: rgba(160, 160, 160, 0.3);
   background-color: transparent;
-  border: 2px solid rgba(160, 160, 160, 0.3);
   height: 7vh;
   width: 77vw;
   font-weight: 800;
   cursor: auto;
+}
+
+.border-color {
+  color: rgba(160, 160, 160, 0.3);
 }
 
 .bouton-lireplus {
@@ -162,7 +202,6 @@ button {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 3vh;
-  border-left: 1px solid rgba(160, 160, 160, 0.3);
 }
 
 .texte-navbar {
@@ -172,7 +211,6 @@ button {
 }
 
 .div-navbar {
-  border-bottom: 1px solid rgba(160, 160, 160, 0.3);
   padding-bottom: 5vh;
 }
 
@@ -191,13 +229,11 @@ button {
   font-weight: 700;
   font-size: 15px;
   width: 60vw;
-  border-bottom: 1px solid rgba(160, 160, 160, 0.3);
   padding-bottom: 2vw;
   margin-top: 5vh;
 }
 
 .fin-titre-navbar {
-  border: none;
   padding: initial;
 }
 
@@ -211,13 +247,11 @@ button {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f002";
-  color: rgb(160, 160, 160);
   position: absolute;
   padding: 12px 7px;
 }
 
 .champs-recherche {
-  border: 1px solid rgba(160, 160, 160, 0.3);
   height: 5vh;
   width: 50vw;
   padding-left: 6vw;
@@ -234,33 +268,20 @@ button {
 }
 
 .grande-div {
-  border: 1px solid rgba(160, 160, 160, 0.3);
   border-top: transparent;
   padding-top: 10vh;
 }
 
 .div-blog {
   margin-bottom: 5vh;
-  border-top: 1px solid rgba(160, 160, 160, 0.3);
-  border-bottom: 1px solid rgba(160, 160, 160, 0.3);
 }
 
 .barre-div {
   width: 77vw;
-  border-top: 1px solid rgba(160, 160, 160, 0.3);
-}
-
-.raccourcie {
-  border-bottom: 1px dotted rgba(160, 160, 160, 0.3);
-}
-
-.raccourcie-dernier {
-  border-bottom: none;
 }
 
 .petit-blog {
   margin: 5vh 0;
-  border: 1px solid rgba(160, 160, 160, 0.3);
 }
 
 img {
@@ -341,10 +362,6 @@ img {
   margin: 0 15px;
 }
 
-.color-grisclair {
-  color: rgb(160, 160, 160);
-}
-
 .margin-fin {
   margin: 4vh 0;
   width: 35vw;
@@ -415,8 +432,25 @@ img {
   .flex-direction-resp-row {
     flex-direction: row;
   }
-  h1 {
+  .border-none-resp {
+    border: none;
+  }
+  .border-resp {
+    border: 1px solid rgba(160, 160, 160, 0.3);
+  }
+  .border-resp-top {
+    border-top: 1px solid rgba(160, 160, 160, 0.3);
+  }
+  .border-resp-right {
     border-right: 1px solid rgba(160, 160, 160, 0.3);
+  }
+  .border-resp-bottom {
+    border-bottom: 1px solid rgba(160, 160, 160, 0.3);
+  }
+  .border-resp-left {
+    border-left: 1px solid rgba(160, 160, 160, 0.3);
+  }
+  h1 {
     padding: 2vh 2vw;
   }
   .lorem:after {
@@ -435,7 +469,6 @@ img {
     content: "ADIPISCING";
   }
   .barre {
-    border-right: 1px solid rgba(160, 160, 160, 0.3);
     padding: 2px 2vw 2px 0;
   }
   .bouton-navbar {
@@ -443,9 +476,6 @@ img {
   }
   .margin-header {
     margin-right: 2vw;
-  }
-  .grande-div {
-    border: none;
   }
   .premiere-div {
     width: 24vw;
@@ -464,18 +494,11 @@ img {
   .contenue-deuxieme-div {
     width: 55vw;
   }
-  .div-blog {
-    border: 1px solid rgba(160, 160, 160, 0.3);
-  }
   .div-blog-fin {
     margin: auto;
   }
   .presentation-deuxieme-div {
-    border-bottom: 1px solid rgba(160, 160, 160, 0.3);
     padding: 0 2vw 0 4vw;
-  }
-  .texte-deuxieme-div {
-    border-right: 1px solid rgba(160, 160, 160, 0.3);
   }
   .texte-titre {
     text-align: initial;
