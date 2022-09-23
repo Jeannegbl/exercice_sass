@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Future Imperfect</title>
+        <link rel="icon" href="https://html5up.net/uploads/demos/future-imperfect/images/logo.jpg">
+        <link rel="stylesheet" type="text/css" href="output.css">
+        <script src="https://kit.fontawesome.com/650a3ee550.js" crossorigin="anonymous"></script>
+    </head>
+    <header class="display-flex flex-al-it-center flex-ju-co-space-between">
+        <div class="display-flex flex-responsive-al-it-center" id="navbarFlou" onclick="closeNav()">
+            <h1 class="texte-hover espace-lettre margin-header">FUTURE IMPERFECT</h1>
+            <p class="lorem texte-hover barre margin-header"></p>
+            <p class="ipsum texte-hover barre margin-header"></p>
+            <p class="feugiat texte-hover barre margin-header"></p>
+            <p class="tempus texte-hover barre margin-header"></p>
+            <p class="adipiscing texte-hover margin-header"></p>
+        </div>
+        <div class="display-flex">
+            <button class="color-grisclair bouton-navbar texte-hover display-none display-responsive-block"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div id="navbarPlus" class="navbar">
+                <div class="div-navbar">
+                    <a class="recherche-navbar logo-recherche texte-navbar display-block">
+                        <input type="text" placeholder="Search" name="recherche" class="champs-recherche">
+                    </a>
+                </div>
+                <div class="div-navbar">
+                    <a class="texte-navbar display-block"><h2 class="texte-hover titre-navbar espace-lettre">LOREM IPSUM<p class="sous-titre-navbar texte-hover espace-lettre">FEUGIAT TEMPUS VEROEROS DOLOR</p></h2></a>
+                    <a class="texte-navbar display-block"><h2 class="texte-hover titre-navbar espace-lettre">DOLOR SIT AMET<p class="sous-titre-navbar texte-hover espace-lettre">SED VITAE JUSTO CONDIMENTUM</p></h2></a>
+                    <a class="texte-navbar display-block"><h2 class="texte-hover titre-navbar espace-lettre">FEUGIAT VEROEROS<p class="sous-titre-navbar texte-hover espace-lettre">PHASELLUS SED ULTRICIES MI CONGUE</p></h2></a>
+                    <a class="texte-navbar display-block"><h2 class="texte-hover titre-navbar fin-titre-navbar espace-lettre">ETIAM SED CONSEQUAT<p class="sous-titre-navbar texte-hover espace-lettre">PORTA LECTUS AMET ULTRICIES</p></h2></a>
+                </div>
+                <div class="div-navbar div-bouton-navbar display-flex flex-responsive-ju-co-center">
+                    <button class="bouton-font bouton bouton-log-in espace-lettre">LOG IN</button>
+                </div>
+            </div>
+            <button class="color-grisclair bouton-navbar texte-hover" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+            <script>
+                function openNav() {
+                    if (x.matches) {
+                        document.getElementById("navbarPlus").style.width = "25vw";
+                    }else{
+                        document.getElementById("navbarPlus").style.width = "80vw"; 
+                    }
+                    document.getElementById("fondFlou").style.filter = "opacity(15%)";
+                    document.getElementById("navbarFlou").style.filter = "opacity(15%)";
+                }
+
+                function closeNav() {
+                    document.getElementById("navbarPlus").style.width = "0";
+                    document.getElementById("fondFlou").style.filter = "none";
+                    document.getElementById("navbarFlou").style.filter = "none";
+                }
+                var x = window.matchMedia("(min-width: 700px)")
+            </script>
+        </div>
+    </header>
+    <body>
+        <div class="grande-div" onclick="closeNav()" id="fondFlou">
+            <div class="flex-column display-flex margin premiere-div flex-al-it-center flex-responsive-al-it-start">
+                <a class="logo">
+                    <img class="display-block" src="https://html5up.net/uploads/demos/future-imperfect/images/logo.jpg">
+                </a>
+                <h2 class="texte-titre espace-lettre titre-premiere-div flex-responsive-al-it-start">FUTURE IMPERFECT</h2>
+                <p class="texte-titre espace-lettre titre-premiere-div flex-responsive-al-it-start">ANOTHER FINE RESPONSIVE SITE TEMPLATE BY <u class="texte-hover">HTML5 UP</u></p>
+            </div>
+            <div class="deuxieme-div">
+                <div class="div-blog flex-column display-flex flex-al-it-center contenue-deuxieme-div">
+                    <div class="presentation-deuxieme-div display-responsive-flex">
+                        <div class="texte-deuxieme-div">
+                            <h2 class="texte-hover texte-titre espace-lettre">MAGNA SED ADIPISCING</h2>
+                            <p class="texte-titre espace-lettre">LOREM IPSUM DOLOR AMET NULLAM CONSEQUAT ETIAM FEUGIAT</p>
+                        </div>
+                        <div class="date-image-deuxieme-div display-flex flex-al-it-center flex-responsive-al-it-end">
+                            <h3 class="espace-lettre">NOVEMBER 1, 2015</h3>
+                            <div class="display-responsive-flex">
+                                <p class="texte-hover pointiller nom"></p>
+                                <img class="image-icone" src="https://html5up.net/uploads/demos/future-imperfect/images/avatar.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-image-blog div-hidden">
+                        <img class="image-blog" src="https://html5up.net/uploads/demos/future-imperfect/images/pic01.jpg">
+                    </div>
+                    <p class="texte-blog">Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                    <div class="fin-deuxieme-div display-responsive-flex flex-responsive-ju-co-space-between">
+                        <div class="ligne-blog display-flex flex-al-it-center flex-ju-co-space-around">
+                            <p class="color-grisclair pointiller texte-hover espace-lettre">GENERAL</p>
+                            <p class="color-grisclair">|</p>
+                            <p class="color-grisclair texte-hover"><i class="fa-solid fa-heart"></i> 28</p>
+                            <p class="color-grisclair">|</p>
+                            <p class="color-grisclair texte-hover"><i class="fa-solid fa-comment"></i> 128</p>
+                        </div>
+                        <button class="bouton-font bouton espace-lettre">CONTINUE READING</button>
+                    </div>
+                </div>
+                <div class="div-blog flex-column display-flex flex-al-it-center contenue-deuxieme-div">
+                    <div class="presentation-deuxieme-div display-responsive-flex">
+                        <div class="texte-deuxieme-div">
+                            <h2 class="texte-hover texte-titre espace-lettre">ULTRICIES SED MAGNA EUISMOD ENIM VITAE GRAVIDA</h2>
+                            <p class="texte-titre espace-lettre">LOREM IPSUM DOLOR AMET NULLAM CONSEQUAT ETIAM FEUGIAT</p>
+                        </div>
+                        <div class="date-image-deuxieme-div display-flex flex-al-it-center flex-responsive-al-it-end">
+                            <h3 class="espace-lettre">OCTOBER 25, 2015</h3>
+                            <div class="display-responsive-flex">
+                                <p class="texte-hover pointiller nom"></p>
+                                <img class="image-icone" src="https://html5up.net/uploads/demos/future-imperfect/images/avatar.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-image-blog div-hidden">
+                        <img class="image-blog" src="https://html5up.net/uploads/demos/future-imperfect/images/pic02.jpg">
+                    </div>
+                    <p class="texte-blog">Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper.</p>
+                    <div class="fin-deuxieme-div display-responsive-flex">
+                        <div class="ligne-blog display-flex flex-al-it-center flex-ju-co-space-around">
+                            <p class="color-grisclair pointiller texte-hover espace-lettre">GENERAL</p>
+                            <p class="color-grisclair">|</p>
+                            <p class="color-grisclair texte-hover"><i class="fa-solid fa-heart"></i> 28</p>
+                            <p class="color-grisclair">|</p>
+                            <p class="color-grisclair texte-hover"><i class="fa-solid fa-comment"></i> 128</p>
+                        </div>
+                        <button class="bouton-font bouton espace-lettre">CONTINUE READING</button>
+                    </div>
+                </div>
+                <div class="div-blog div-blog-fin flex-column display-flex flex-al-it-center contenue-deuxieme-div">
+                    <div class="presentation-deuxieme-div display-responsive-flex">
+                        <div class="texte-deuxieme-div">
+                            <h2 class="texte-hover texte-titre espace-lettre">EUISMOD ET ACCUMSAN</h2>
+                            <p class="texte-titre espace-lettre">LOREM IPSUM DOLOR AMET NULLAM CONSEQUAT ETIAM FEUGIAT</p>
+                        </div>
+                        <div class="date-image-deuxieme-div display-flex flex-al-it-center flex-responsive-al-it-end">
+                            <h3 class="espace-lettre">OCTOBER 22, 2015</h3>
+                            <div class="display-responsive-flex">
+                                <p class="texte-hover pointiller nom"></p>
+                                <img class="image-icone" src="https://html5up.net/uploads/demos/future-imperfect/images/avatar.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-image-blog div-hidden">
+                        <img class="image-blog" src="https://html5up.net/uploads/demos/future-imperfect/images/pic03.jpg">
+                    </div>
+                    <p class="texte-blog">Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Cras vehicula tellus eu ligula viverra, ac fringilla turpis suscipit. Quisque vestibulum rhoncus ligula.</p>
+                    <div class="fin-deuxieme-div display-responsive-flex">
+                        <div class="ligne-blog display-flex flex-al-it-center flex-ju-co-space-around">
+                            <p class="color-grisclair pointiller texte-hover espace-lettre">GENERAL</p>
+                            <p class="color-grisclair">|</p>
+                            <p class="color-grisclair texte-hover"><i class="fa-solid fa-heart"></i> 28</p>
+                            <p class="color-grisclair">|</p>
+                            <p class="color-grisclair texte-hover"><i class="fa-solid fa-comment"></i> 128</p>
+                        </div>
+                        <button class="bouton-font bouton espace-lettre">CONTINUE READING</button>
+                    </div>
+                </div>
+                <div class="flex-column display-flex flex-al-it-center flex-row contenue-deuxieme-div">
+                    <button class="bouton-font bouton-retour espace-lettre">PREVIOUS PAGE</button>
+                    <button class="bouton-font bouton espace-lettre">NEXT PAGE</button>
+                </div>
+            </div>
+            <div class="flex-column display-flex flex-al-it-center premiere-div flex-responsive-al-it-start">
+                <div class="barre-div">
+                    <div class="petit-blog">
+                        <div class="div-hidden">
+                            <img class="image-petit-blog" src="https://html5up.net/uploads/demos/future-imperfect/images/pic04.jpg">
+                        </div>
+                        <div class="texte-petit-blog display-flex flex-al-it-center">
+                            <h3 class="texte-hover espace-lettre petit-blog-titre">VITAE SED CONDIMENTUM<p class="petit-blog-date">OCTOBER 20, 2015</p></h3>
+                            <img class="image-icone" src="https://html5up.net/uploads/demos/future-imperfect/images/avatar.jpg">
+                        </div>
+                    </div>
+                    <div class="petit-blog">
+                        <div class="div-hidden">
+                            <img class="image-petit-blog" src="https://html5up.net/uploads/demos/future-imperfect/images/pic05.jpg">
+                        </div>
+                        <div class="texte-petit-blog display-flex flex-al-it-center">
+                            <h3 class="texte-hover espace-lettre petit-blog-titre">RUTRUM NEQUE ACCUMSAN<p class="petit-blog-date">OCTOBER 19, 2015</p></h3>
+                            <img class="image-icone" src="https://html5up.net/uploads/demos/future-imperfect/images/avatar.jpg">
+                        </div>
+                    </div>
+                    <div class="petit-blog">
+                        <div class="div-hidden">
+                            <img class="image-petit-blog" src="https://html5up.net/uploads/demos/future-imperfect/images/pic06.jpg">
+                        </div>
+                        <div class="texte-petit-blog display-flex flex-al-it-center">
+                            <h3 class="texte-hover espace-lettre petit-blog-titre">ODIO CONGUE MATTIS<p class="petit-blog-date">OCTOBER 18, 2015</p></h3>
+                            <img class="image-icone" src="https://html5up.net/uploads/demos/future-imperfect/images/avatar.jpg">
+                        </div>
+                    </div>
+                    <div class="petit-blog">
+                        <div class="div-hidden">
+                            <img class="image-petit-blog" src="https://html5up.net/uploads/demos/future-imperfect/images/pic07.jpg">
+                        </div>
+                        <div class="texte-petit-blog display-flex flex-al-it-center">
+                            <h3 class="texte-hover espace-lettre petit-blog-titre">ENIM NISL VEROEROS<p class="petit-blog-date">OCTOBER 17, 2015</p></h3>
+                            <img class="image-icone" src="https://html5up.net/uploads/demos/future-imperfect/images/avatar.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-column display-flex flex-al-it-center premiere-div flex-responsive-al-it-start">
+                <div class="barre-div">
+                    <div class="raccourcie display-flex">
+                        <div>
+                            <img src="https://html5up.net/uploads/demos/future-imperfect/images/pic08.jpg">
+                        </div>
+                        <div class="texte-petit-blog display-flex flex-al-it-center">
+                            <h3 class="texte-hover espace-lettre petit-blog-titre">LOREM IPSUM FERMENTUM UT NISL VITAE<p class="petit-blog-date">OCTOBER 20, 2015</p></h3>
+                        </div>
+                    </div>
+                    <div class="raccourcie display-flex">
+                        <div>
+                            <img src="https://html5up.net/uploads/demos/future-imperfect/images/pic09.jpg">
+                        </div>
+                        <div class="texte-petit-blog display-flex flex-al-it-center">
+                            <h3 class="texte-hover espace-lettre petit-blog-titre">CONVALLIS MAXIMUS NISL MATTIS NUNC ID LOREM<p class="petit-blog-date">OCTOBER 15, 2015</p></h3>
+                        </div>
+                    </div>
+                    <div class="raccourcie display-flex">
+                        <div>
+                            <img src="https://html5up.net/uploads/demos/future-imperfect/images/pic10.jpg">
+                        </div>
+                        <div class="texte-petit-blog display-flex flex-al-it-center">
+                            <h3 class="texte-hover espace-lettre petit-blog-titre">EUISMOD AMET PLACERAT VIVAMUS PORTTITOR<p class="petit-blog-date">OCTOBER 10, 2015</p></h3>
+                        </div>
+                    </div>
+                    <div class="raccourcie display-flex">
+                        <div>
+                            <img src="https://html5up.net/uploads/demos/future-imperfect/images/pic11.jpg">
+                        </div>
+                        <div class="texte-petit-blog display-flex flex-al-it-center">
+                            <h3 class="texte-hover espace-lettre petit-blog-titre">MAGNA ENIM ACCUMSAN TORTOR CURSUS ULTRICIES<p class="petit-blog-date">OCTOBER 8, 2015</p></h3>
+                        </div>
+                    </div>
+                    <div class="raccourcie raccourcie-dernier display-flex">
+                        <div>
+                            <img src="https://html5up.net/uploads/demos/future-imperfect/images/pic12.jpg">
+                        </div>
+                        <div class="texte-petit-blog display-flex flex-al-it-center">
+                            <h3 class="texte-hover espace-lettre petit-blog-titre">CONGUE ULLAM CORPER LOREM IPSUM DOLOR<p class="petit-blog-date">OCTOBER 7, 2015</p></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-column display-flex flex-al-it-center premiere-div flex-responsive-al-it-start">
+                <div class="barre-div">
+                    <h3 class="about espace-lettre">ABOUT</h3>
+                    <p class="texte-about">Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
+                    <button class="bouton-font bouton bouton-lireplus espace-lettre">LEARN MORE</button>
+                </div>
+            </div>
+            <div class="flex-column display-flex flex-al-it-center premiere-div flex-responsive-al-it-start">
+                <div class="barre-div">
+                    <div class="margin-fin display-flex flex-ju-co-space-around">
+                        <i class="fa-brands fa-twitter texte-hover color-grisclair"></i>
+                        <i class="fa-brands fa-facebook-f texte-hover color-grisclair"></i>
+                        <i class="fa-brands fa-instagram texte-hover color-grisclair"></i>
+                        <i class="fa-solid fa-rss texte-hover color-grisclair"></i>
+                        <i class="fa-solid fa-envelope texte-hover color-grisclair"></i>
+                    </div>
+                    <p class="espace-mot">© UNTITLED. DESIGN: <u class="texte-hover">HTML5 UP</u>. IMAGES: <u class="texte-hover">UNSPLASH</u>.</p>
+                </div>
+            </div>
+        </div>    
+    </body>
+</html>
