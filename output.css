@@ -129,6 +129,15 @@ header {
   font-weight: 900;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+.hover-pointer:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .title-color {
   color: #3C3B3B;
 }
@@ -149,21 +158,8 @@ h3 {
   margin: 2vh 0;
 }
 
-p {
-  cursor: initial;
-}
-
 u, .pointiller {
   text-decoration: underline dotted;
-}
-
-.texte-hover:hover {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-button {
-  cursor: pointer;
 }
 
 .bouton-navbar {
@@ -183,7 +179,6 @@ button {
   background-color: transparent;
   height: 7vh;
   width: 77vw;
-  cursor: auto;
 }
 
 .border-color {
@@ -283,7 +278,6 @@ button {
 
 img {
   margin: 20px;
-  cursor: pointer;
 }
 
 .image-icone {
@@ -357,7 +351,6 @@ img {
   overflow: hidden;
   position: relative;
   width: 4em;
-  cursor: pointer;
 }
 
 .logo:before {

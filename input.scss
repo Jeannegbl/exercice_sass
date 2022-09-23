@@ -120,6 +120,17 @@ header{
 @include font-weight(8);
 @include font-weight(9);
 
+@mixin cursor($cursor) {
+    .#{$cursor} {
+        cursor: $cursor;
+    }
+    .hover-#{$cursor}:hover {
+        cursor: $cursor;
+        text-decoration: none;
+    }
+}
+@include cursor(pointer);
+
 .title-color{
     color: $title-color;
 }
@@ -136,20 +147,10 @@ h2{
 h3{
     margin: 2vh 0;
 }
-p{
-   cursor: initial;
-}
 u, .pointiller{
     text-decoration: underline dotted;
 }
-.texte-hover:hover{
-    text-decoration: none;
-    cursor: pointer;
-}
 
-button{
-    cursor: pointer;
-}
 .bouton-navbar{
     height: 6vh;
     width: 15vw;
@@ -165,7 +166,6 @@ button{
     background-color: transparent;
     height: 7vh;
     width: 77vw;
-    cursor: auto;
 }
 .border-color{
     color: $border-color;
@@ -255,7 +255,6 @@ button{
 
 img{
     margin: 20px;
-    cursor: pointer;
 }
 .image-icone{
     border-radius: 20px;
@@ -316,7 +315,6 @@ img{
     overflow: hidden;
     position: relative;
     width: 4em;
-    cursor: pointer;
 }
 .logo:before {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100px' height='100px' viewBox='0 0 100 100' preserveAspectRatio='none' zoomAndPan='disable'%3E%3Cpolygon points='0,0 100,0 100,25 50,0 0,25' style='fill:%23f4f4f4' /%3E%3Cpolygon points='0,100 100,100 100,75 50,100 0,75' style='fill:%23f4f4f4' /%3E%3C/svg%3E");
