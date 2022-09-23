@@ -10,16 +10,8 @@
   display: none;
 }
 
-.align-items-start {
-  align-items: start;
-}
-
 .align-items-center {
   align-items: center;
-}
-
-.align-items-end {
-  align-items: end;
 }
 
 .justify-content-space-around {
@@ -34,16 +26,8 @@
   justify-content: center;
 }
 
-.justify-content-end {
-  justify-content: end;
-}
-
 .flex-direction-column {
   flex-direction: column;
-}
-
-.flex-direction-row {
-  flex-direction: row;
 }
 
 .primary-color {
@@ -78,10 +62,6 @@
   border-top: 1px solid rgba(160, 160, 160, 0.3);
 }
 
-.border-right {
-  border-right: 1px solid rgba(160, 160, 160, 0.3);
-}
-
 .border-bottom {
   border-bottom: 1px solid rgba(160, 160, 160, 0.3);
 }
@@ -113,6 +93,42 @@ header {
   font-family: "Raleway", Helvetica, sans-serif;
 }
 
+.font-size-10 {
+  font-size: 10px;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-15 {
+  font-size: 15px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-weight-5 {
+  font-weight: 500;
+}
+
+.font-weight-7 {
+  font-weight: 700;
+}
+
+.font-weight-8 {
+  font-weight: 800;
+}
+
+.font-weight-9 {
+  font-weight: 900;
+}
+
 .title-color {
   color: #3C3B3B;
 }
@@ -123,28 +139,18 @@ header {
 
 h1 {
   padding: 20px;
-  font-size: 15px;
 }
 
 h2 {
   margin-top: 6vh;
-  font-weight: 800;
-  font-size: 20px;
 }
 
 h3 {
-  font-size: 10px;
   margin: 2vh 0;
 }
 
 p {
   cursor: initial;
-  font-size: 12px;
-}
-
-.about {
-  font-weight: 800;
-  font-size: 12px;
 }
 
 u, .pointiller {
@@ -163,7 +169,6 @@ button {
 .bouton-navbar {
   height: 6vh;
   width: 15vw;
-  font-size: 20px;
   background-color: transparent;
 }
 
@@ -172,14 +177,12 @@ button {
   height: 7vh;
   width: 77vw;
   margin: 40px 0;
-  font-weight: 800;
 }
 
 .bouton-retour {
   background-color: transparent;
   height: 7vh;
   width: 77vw;
-  font-weight: 800;
   cursor: auto;
 }
 
@@ -219,15 +222,12 @@ button {
 }
 
 .bouton-log-in {
-  font-weight: 700;
   margin: 40px 0;
   width: 50vw;
   height: 9vh;
 }
 
 .titre-navbar {
-  font-weight: 700;
-  font-size: 15px;
   width: 60vw;
   padding-bottom: 2vw;
   margin-top: 5vh;
@@ -238,14 +238,11 @@ button {
 }
 
 .sous-titre-navbar {
-  font-weight: 500;
-  font-size: 10px;
   padding-top: 2vh;
 }
 
 .logo-recherche:before {
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
   content: "\f002";
   position: absolute;
   padding: 12px 7px;
@@ -326,28 +323,16 @@ img {
 .texte-blog {
   padding: 2vh 10vw;
   line-height: 4vh;
-  font-size: 18px;
 }
 
 .texte-about {
   line-height: 3.5vh;
-  font-size: 15px;
 }
 
 .texte-titre {
   padding: 0 10vw;
   text-align: center;
   line-height: 4vh;
-}
-
-.petit-blog-titre {
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.petit-blog-date {
-  font-size: 10px;
-  font-weight: 700;
 }
 
 .espace-lettre {
@@ -402,9 +387,6 @@ img {
   .display-resp-flex {
     display: flex;
   }
-  .display-resp-none {
-    display: none;
-  }
   .align-items-resp-start {
     align-items: start;
   }
@@ -414,17 +396,8 @@ img {
   .align-items-resp-end {
     align-items: end;
   }
-  .justify-content-resp-space-around {
-    justify-content: space-around;
-  }
   .justify-content-resp-space-between {
     justify-content: space-between;
-  }
-  .justify-content-resp-center {
-    justify-content: center;
-  }
-  .justify-content-resp-end {
-    justify-content: end;
   }
   .flex-direction-resp-column {
     flex-direction: column;
@@ -438,17 +411,20 @@ img {
   .border-resp {
     border: 1px solid rgba(160, 160, 160, 0.3);
   }
-  .border-resp-top {
-    border-top: 1px solid rgba(160, 160, 160, 0.3);
-  }
   .border-resp-right {
     border-right: 1px solid rgba(160, 160, 160, 0.3);
   }
   .border-resp-bottom {
     border-bottom: 1px solid rgba(160, 160, 160, 0.3);
   }
-  .border-resp-left {
-    border-left: 1px solid rgba(160, 160, 160, 0.3);
+  .font-size-resp-10 {
+    font-size: 10px;
+  }
+  .font-size-resp-15 {
+    font-size: 15px;
+  }
+  .font-weight-resp-8 {
+    font-weight: 800;
   }
   h1 {
     padding: 2vh 2vw;
@@ -521,7 +497,6 @@ img {
     padding: 2vh 3vw;
     text-align: initial;
     line-height: 3vh;
-    font-size: 15px;
   }
   .fin-deuxieme-div {
     width: 90%;
@@ -533,17 +508,14 @@ img {
   .bouton {
     padding: 1vw;
     width: auto;
-    font-size: 10px;
   }
   .bouton-retour {
     padding: 1vw;
     width: auto;
-    font-size: 10px;
     margin-right: 1vw;
   }
   .bouton-log-in {
     width: 17vw;
-    font-weight: 800;
   }
   .navbar {
     padding-top: 6vh;
