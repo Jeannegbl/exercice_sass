@@ -46,12 +46,23 @@
   flex-direction: row;
 }
 
+.primary-color {
+  background-color: #F4F4F4;
+}
+
 .secondary-color {
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.hover-color:hover {
+  color: #2EBAAE;
+}
+
+.border-hover-color:hover {
+  border-color: #2EBAAE;
 }
 
 body {
-  background-color: #F4F4F4;
   margin: 0;
 }
 
@@ -100,7 +111,6 @@ u, .pointiller {
 }
 
 .texte-hover:hover {
-  color: #2EBAAE;
   text-decoration: none;
   cursor: pointer;
 }
@@ -125,11 +135,6 @@ button {
   width: 77vw;
   margin: 40px 0;
   font-weight: 800;
-}
-
-.bouton:hover {
-  color: #2EBAAE;
-  border-color: #2EBAAE;
 }
 
 .bouton-retour {
@@ -213,7 +218,6 @@ button {
 
 .champs-recherche {
   border: 1px solid rgba(160, 160, 160, 0.3);
-  background-color: #F4F4F4;
   height: 5vh;
   width: 50vw;
   padding-left: 6vw;
@@ -221,8 +225,12 @@ button {
 
 .champs-recherche:focus {
   outline: none;
-  border: 1px solid #2EBAAE;
+  border: 1px solid;
   box-shadow: inset 0 0 0 1px #2EBAAE;
+}
+
+.border-focus-color:focus {
+  border-color: #2EBAAE;
 }
 
 .grande-div {
@@ -252,7 +260,7 @@ button {
 
 .petit-blog {
   margin: 5vh 0;
-  border: 0.5px solid rgba(160, 160, 160, 0.3);
+  border: 1px solid rgba(160, 160, 160, 0.3);
 }
 
 img {
@@ -431,12 +439,7 @@ img {
     padding: 2px 2vw 2px 0;
   }
   .bouton-navbar {
-    height: 6vh;
     width: 5vw;
-    font-size: 20px;
-    border: none;
-    border-left: 1px solid rgba(160, 160, 160, 0.3);
-    background-color: transparent;
   }
   .margin-header {
     margin-right: 2vw;

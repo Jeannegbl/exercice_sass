@@ -2,8 +2,8 @@ $color-titre : #3C3B3B;
 $color-texte : #646464;
 $primary-color : #F4F4F4;
 $secondary-color : #FFFFFF;
-$color-hover : #2EBAAE;
-$color-border :rgba(160, 160, 160, 0.3);
+$hover-color : #2EBAAE;
+$border-color :rgba(160, 160, 160, 0.3);
 $color-bouton : rgb(160, 160, 160);
 $font : "Raleway", Helvetica, sans-serif;
 
@@ -47,15 +47,28 @@ $font : "Raleway", Helvetica, sans-serif;
 @include flex-direction(column);
 @include flex-direction(row);
 
+
+.primary-color{
+    background-color: $primary-color;
+}
 .secondary-color{
-    color : $secondary-color;
+    background-color : $secondary-color;
+}
+
+.hover-color:hover{
+    color : $hover-color;
+}
+.border-hover-color:hover{
+    border-color: $hover-color;
+}
+.border-color{
+
 }
 body{
-    background-color: $primary-color;
     margin: 0;
 }
 header{
-    border: 1px solid $color-border;
+    border: 1px solid $border-color;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -92,7 +105,6 @@ u, .pointiller{
     text-decoration: underline dotted;
 }
 .texte-hover:hover{
-    color: $color-hover;
     text-decoration: none;
     cursor: pointer;
 }
@@ -105,25 +117,21 @@ button{
     width: 15vw;
     font-size: 20px;
     border: none;
-    border-left: 1px solid $color-border;
+    border-left: 1px solid $border-color;
     background-color: transparent;
 }
 .bouton{
     background-color: transparent;
-    border: 2px solid $color-border;
+    border: 2px solid $border-color;
     height: 7vh;
     width: 77vw;
     margin: 40px 0;
     font-weight: 800;
 }
-.bouton:hover{
-    color: $color-hover;
-    border-color: $color-hover;
-}
 .bouton-retour{
-    color: $color-border;
+    color: $border-color;
     background-color: transparent;
-    border: 2px solid $color-border;
+    border: 2px solid $border-color;
     height: 7vh;
     width: 77vw;
     font-weight: 800;
@@ -143,7 +151,7 @@ button{
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 3vh;
-    border-left: 1px solid $color-border ;
+    border-left: 1px solid $border-color ;
 }
   
 .texte-navbar{
@@ -153,7 +161,7 @@ button{
 }
 
 .div-navbar{
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid $border-color;
     padding-bottom: 5vh;
 }
 .div-bouton-navbar{
@@ -169,7 +177,7 @@ button{
     font-weight: 700;
     font-size: 15px;
     width: 60vw;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid $border-color;
     padding-bottom: 2vw;
     margin-top: 5vh;
 }
@@ -193,8 +201,7 @@ button{
 }
 
 .champs-recherche{
-    border:1px solid $color-border;
-    background-color: $primary-color;
+    border:1px solid $border-color;
     height: 5vh;
     width: 50vw;
     padding-left: 6vw;
@@ -202,34 +209,37 @@ button{
 
 .champs-recherche:focus{
     outline: none;
-    border: 1px solid $color-hover;
-    box-shadow: inset 0 0 0 1px$color-hover;
+    border: 1px solid;
+    box-shadow: inset 0 0 0 1px $hover-color;
+}
+.border-focus-color:focus{
+    border-color: $hover-color;
 }
 
 .grande-div{
-    border: 1px solid $color-border;
+    border: 1px solid $border-color;
     border-top: transparent;
     padding-top: 10vh;
 }
 .div-blog{
     margin-bottom: 5vh;
-    border-top: 1px solid $color-border;
-    border-bottom: 1px solid $color-border;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
 }
 
 .barre-div{
     width: 77vw;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid $border-color;
 }
 .raccourcie{
-    border-bottom: 1px dotted $color-border;
+    border-bottom: 1px dotted $border-color;
 }
 .raccourcie-dernier{
     border-bottom: none;
 }
 .petit-blog{
     margin: 5vh 0;
-    border: 0.5px solid $color-border;
+    border: 1px solid $border-color;
 }
 
 img{
@@ -372,7 +382,7 @@ img{
     @include flex-direction-responsive(row);
 
     h1{
-        border-right: 1px solid $color-border;
+        border-right: 1px solid $border-color;
         padding: 2vh 2vw;
     }
     .lorem:after{
@@ -391,16 +401,11 @@ img{
         content: "ADIPISCING";
     }
     .barre{
-        border-right: 1px solid $color-border;
+        border-right: 1px solid $border-color;
         padding: 2px 2vw 2px 0;
     }
     .bouton-navbar{
-        height: 6vh;
         width: 5vw;
-        font-size: 20px;
-        border: none;
-        border-left: 1px solid $color-border;
-        background-color: transparent;
     }
     .margin-header{
         margin-right: 2vw;
@@ -426,17 +431,17 @@ img{
         width: 55vw;
     }
     .div-blog{
-        border: 1px solid $color-border;
+        border: 1px solid $border-color;
     }
     .div-blog-fin{
         margin: auto;
     }
     .presentation-deuxieme-div{
-        border-bottom: 1px solid $color-border;
+        border-bottom: 1px solid $border-color;
         padding: 0 2vw 0 4vw;
     }
     .texte-deuxieme-div{
-        border-right: 1px solid $color-border;
+        border-right: 1px solid $border-color;
     }
     .texte-titre{
         text-align: initial;
