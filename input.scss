@@ -1,7 +1,7 @@
 $color-titre : #3C3B3B;
 $color-texte : #646464;
-$color-fond : #F4F4F4;
-$color-blog : #FFFFFF;
+$primary-color : #F4F4F4;
+$secondary-color : #FFFFFF;
 $color-hover : #2EBAAE;
 $color-border :rgba(160, 160, 160, 0.3);
 $color-bouton : rgb(160, 160, 160);
@@ -18,7 +18,7 @@ $font : "Raleway", Helvetica, sans-serif;
 @include display(none);
 
 @mixin align-items($type) {
-    .flex-al-it-#{$type} {
+    .align-items-#{$type} {
         align-items: $type;
     }
 }
@@ -28,7 +28,7 @@ $font : "Raleway", Helvetica, sans-serif;
 @include align-items(end);
 
 @mixin justify-content($type) {
-    .flex-ju-co-#{$type} {
+    .justify-content-#{$type} {
         justify-content: $type;
     }
 }
@@ -38,8 +38,20 @@ $font : "Raleway", Helvetica, sans-serif;
 @include justify-content(center);
 @include justify-content(end);
 
+@mixin flex-direction($type) {
+    .flex-direction-#{$type} {
+        flex-direction: $type;
+    }
+}
+
+@include flex-direction(column);
+@include flex-direction(row);
+
+.secondary-color{
+    color : $secondary-color;
+}
 body{
-    background-color: $color-fond;
+    background-color: $primary-color;
     margin: 0;
 }
 header{
@@ -48,7 +60,6 @@ header{
     width: 100%;
     z-index: 1;
     height: 6vh;
-    background-color: $color-blog;
 }
 h1, h2, h3, p, .bouton-font{
     color: $color-titre;
@@ -129,7 +140,6 @@ button{
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: $color-blog;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 3vh;
@@ -184,7 +194,7 @@ button{
 
 .champs-recherche{
     border:1px solid $color-border;
-    background-color: $color-fond;
+    background-color: $primary-color;
     height: 5vh;
     width: 50vw;
     padding-left: 6vw;
@@ -202,13 +212,9 @@ button{
     padding-top: 10vh;
 }
 .div-blog{
-    background-color: $color-blog;
     margin-bottom: 5vh;
     border-top: 1px solid $color-border;
     border-bottom: 1px solid $color-border;
-}
-.date-image-deuxieme-div{
-    flex-direction: column;
 }
 
 .barre-div{
@@ -224,7 +230,6 @@ button{
 .petit-blog{
     margin: 5vh 0;
     border: 0.5px solid $color-border;
-    background-color: $color-blog;
 }
 
 img{
@@ -290,9 +295,6 @@ img{
 .texte-petit-blog{
     margin: 0 15px;
 }
-.flex-column{
-    flex-direction: column;
-}
 .color-grisclair{
     color: $color-bouton;
 }
@@ -330,7 +332,7 @@ img{
 @media screen and (min-width: 700px) {
 
     @mixin display-responsive($type) {
-        .display-responsive-#{$type} {
+        .display-resp-#{$type} {
             display: $type;
         }
     }
@@ -340,7 +342,7 @@ img{
     @include display-responsive(none);
 
     @mixin align-items-responsive($type) {
-        .flex-responsive-al-it-#{$type} {
+        .align-items-resp-#{$type} {
             align-items: $type;
         }
     }
@@ -350,7 +352,7 @@ img{
     @include align-items-responsive(end);
     
     @mixin justify-content-responsive($type) {
-        .flex-responsive-ju-co-#{$type} {
+        .justify-content-resp-#{$type} {
             justify-content: $type;
         }
     }
@@ -359,6 +361,16 @@ img{
     @include justify-content-responsive(space-between);
     @include justify-content-responsive(center);
     @include justify-content-responsive(end);
+
+    @mixin flex-direction-responsive($type) {
+        .flex-direction-resp-#{$type} {
+            flex-direction: $type;
+        }
+    }
+    
+    @include flex-direction-responsive(column);
+    @include flex-direction-responsive(row);
+
     h1{
         border-right: 1px solid $color-border;
         padding: 2vh 2vw;
@@ -397,7 +409,6 @@ img{
         border: none;
     }
     .premiere-div{
-        flex-direction: column;
         width: 24vw;
         padding-left: 9vw;
     }
@@ -431,7 +442,7 @@ img{
         text-align: initial;
         padding: initial;
     }
-    .date-image-deuxieme-div{
+    .auteur-date-article{
         margin-left: 0;
         margin-top: 3vw;
         padding-left: 2vw;
@@ -480,9 +491,6 @@ img{
     }
     .margin-fin{
         width: 10vw;
-    }
-    .flex-row{
-        flex-direction: row;
     }
     .texte-navbar{
         padding: 0 0 0 3vw;
