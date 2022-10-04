@@ -91,9 +91,7 @@ body{
 }
 header{
     position: fixed;
-    width: 100%;
     z-index: 1;
-    height: 6vh;
 }
 .font{
     font-family: $font;
@@ -119,6 +117,37 @@ header{
 @include font-weight(7);
 @include font-weight(8);
 @include font-weight(9);
+
+@mixin height($taille) {
+    .height-#{$taille} {
+        height : $taille * 1vh;
+    }
+    .height-#{$taille}-cent {
+        height : $taille * 1%;
+    }
+}
+@include height(5);
+@include height(6);
+@include height(7);
+@include height(9);
+@include height(100);
+
+@mixin width($taille) {
+    .width-#{$taille} {
+        width : $taille * 1vw;
+    }
+    .width-#{$taille}-cent {
+        width : $taille * 1%;
+    }
+}
+@include width(0);
+@include width(15);
+@include width(35);
+@include width(50);
+@include width(60);
+@include width(77);
+@include width(100);
+
 
 @mixin cursor($cursor) {
     .#{$cursor} {
@@ -152,32 +181,21 @@ u, .pointiller{
 }
 
 .bouton-navbar{
-    height: 6vh;
-    width: 15vw;
     background-color: transparent;
 }
 .bouton{
     background-color: transparent;
-    height: 7vh;
-    width: 77vw;
     margin: 5vh 0;
 }
 .bouton-retour{
     background-color: transparent;
-    height: 7vh;
-    width: 77vw;
 }
 .border-color{
     color: $border-color;
 }
 
-.bouton-lireplus{
-    height: 7vh;
-}
 .navbar{
     z-index: 1;
-    height: 100%;
-    width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -201,11 +219,8 @@ u, .pointiller{
 }
 .bouton-log-in{
     margin: 5vh 0;
-    width: 50vw;
-    height: 9vh;
 }
 .titre-navbar{
-    width: 60vw;
     padding-bottom: 4vh;
     margin-top: 5vh;
 }
@@ -224,8 +239,6 @@ u, .pointiller{
 }
 
 .champs-recherche{
-    height: 5vh;
-    width: 50vw;
     padding-left: 6vw;
 }
 
@@ -246,9 +259,6 @@ u, .pointiller{
     margin-bottom: 5vh;
 }
 
-.barre-div{
-    width: 77vw;
-}
 .petit-blog{
     margin: 5vh 0;
 }
@@ -266,7 +276,6 @@ u, .pointiller{
 }
 .image-blog{
     margin: auto 0;
-    width: 100%;
     transition: 0.4s;
 }
 .image-blog:hover{
@@ -277,7 +286,6 @@ u, .pointiller{
     overflow: hidden;
 }
 .image-petit-blog{
-    width: 100%;
     margin: 0;
     transition: 0.4s;
 }
@@ -307,7 +315,6 @@ u, .pointiller{
 }
 .margin-fin{
     margin: 4vh 0;
-    width: 35vw;
 }
 
 .logo {
@@ -404,6 +411,28 @@ u, .pointiller{
     }
     @include font-weight-responsive(8);
 
+    @mixin width-responsive($taille) {
+        .width-resp-auto {
+            width : auto;
+        }
+        .width-resp-#{$taille} {
+            width : $taille * 1vw;
+        }
+        .width-resp-#{$taille}-cent {
+            width : $taille * 1%;
+        }
+
+    }
+    @include width-responsive(5);
+    @include width-responsive(10);
+    @include width-responsive(15);
+    @include width-responsive(12);
+    @include width-responsive(15);
+    @include width-responsive(17);
+    @include width-responsive(24);
+    @include width-responsive(55);
+    @include width-responsive(90);
+
     h1{
         padding: 2vh 2vw;
     }
@@ -425,14 +454,10 @@ u, .pointiller{
     .barre{
         padding: 1vh 2vw 1vh 0;
     }
-    .bouton-navbar{
-        width: 5vw;
-    }
     .margin-header{
         margin-right: 2vw;
     }
     .premiere-div{
-        width: 24vw;
         padding-left: 9vw;
     }
     .titre-premiere-div{
@@ -444,9 +469,6 @@ u, .pointiller{
         top: 12vh;
         right: 8vw;
         position: absolute;
-    }
-    .contenue-deuxieme-div{
-        width: 55vw;
     }
     .div-blog-fin{
         margin: auto;
@@ -463,7 +485,6 @@ u, .pointiller{
         margin-top: 3vw;
         padding-left: 2vw;
         text-align: end;
-        width: 12vw;
     }
     .nom:after{
         content: "JANE DOE";
@@ -476,46 +497,27 @@ u, .pointiller{
         text-align: initial;
         line-height: 3vh;
     }
-    .fin-deuxieme-div{
-        width: 90%;
-    }
     .ligne-blog{
         order: 1;
-        width: 15vw;
     }
     .bouton{
         padding: 1vw;
-        width: auto;
     }
     .bouton-retour{
         padding: 1vw;
-        width: auto;
         margin-right: 1vw;
-    }
-    .bouton-log-in{
-        width: 17vw;
     }
     .navbar{
         padding-top: 6vh;
-    }
-    .barre-div{
-        width: auto;
-    }
-    .margin-fin{
-        width: 10vw;
     }
     .texte-navbar{
         padding-left: 3vw;
     }
     .champs-recherche{
-        width: 15vw;
         padding-left: 2vw;
     }
     .div-navbar{
         padding-bottom: 6vh;
-    }
-    .titre-navbar{
-        width: 17vw;
     }
     .sous-titre-navbar{
         padding-top: initial;

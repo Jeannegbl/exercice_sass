@@ -84,9 +84,7 @@ body {
 
 header {
   position: fixed;
-  width: 100%;
   z-index: 1;
-  height: 6vh;
 }
 
 .font {
@@ -129,6 +127,102 @@ header {
   font-weight: 900;
 }
 
+.height-5 {
+  height: 5vh;
+}
+
+.height-5-cent {
+  height: 5%;
+}
+
+.height-6 {
+  height: 6vh;
+}
+
+.height-6-cent {
+  height: 6%;
+}
+
+.height-7 {
+  height: 7vh;
+}
+
+.height-7-cent {
+  height: 7%;
+}
+
+.height-9 {
+  height: 9vh;
+}
+
+.height-9-cent {
+  height: 9%;
+}
+
+.height-100 {
+  height: 100vh;
+}
+
+.height-100-cent {
+  height: 100%;
+}
+
+.width-0 {
+  width: 0vw;
+}
+
+.width-0-cent {
+  width: 0%;
+}
+
+.width-15 {
+  width: 15vw;
+}
+
+.width-15-cent {
+  width: 15%;
+}
+
+.width-35 {
+  width: 35vw;
+}
+
+.width-35-cent {
+  width: 35%;
+}
+
+.width-50 {
+  width: 50vw;
+}
+
+.width-50-cent {
+  width: 50%;
+}
+
+.width-60 {
+  width: 60vw;
+}
+
+.width-60-cent {
+  width: 60%;
+}
+
+.width-77 {
+  width: 77vw;
+}
+
+.width-77-cent {
+  width: 77%;
+}
+
+.width-100 {
+  width: 100vw;
+}
+
+.width-100-cent {
+  width: 100%;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -163,36 +257,24 @@ u, .pointiller {
 }
 
 .bouton-navbar {
-  height: 6vh;
-  width: 15vw;
   background-color: transparent;
 }
 
 .bouton {
   background-color: transparent;
-  height: 7vh;
-  width: 77vw;
   margin: 5vh 0;
 }
 
 .bouton-retour {
   background-color: transparent;
-  height: 7vh;
-  width: 77vw;
 }
 
 .border-color {
   color: rgba(160, 160, 160, 0.3);
 }
 
-.bouton-lireplus {
-  height: 7vh;
-}
-
 .navbar {
   z-index: 1;
-  height: 100%;
-  width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -218,12 +300,9 @@ u, .pointiller {
 
 .bouton-log-in {
   margin: 5vh 0;
-  width: 50vw;
-  height: 9vh;
 }
 
 .titre-navbar {
-  width: 60vw;
   padding-bottom: 4vh;
   margin-top: 5vh;
 }
@@ -244,8 +323,6 @@ u, .pointiller {
 }
 
 .champs-recherche {
-  height: 5vh;
-  width: 50vw;
   padding-left: 6vw;
 }
 
@@ -268,10 +345,6 @@ u, .pointiller {
   margin-bottom: 5vh;
 }
 
-.barre-div {
-  width: 77vw;
-}
-
 .petit-blog {
   margin: 5vh 0;
 }
@@ -292,7 +365,6 @@ u, .pointiller {
 
 .image-blog {
   margin: auto 0;
-  width: 100%;
   transition: 0.4s;
 }
 
@@ -305,7 +377,6 @@ u, .pointiller {
 }
 
 .image-petit-blog {
-  width: 100%;
   margin: 0;
   transition: 0.4s;
 }
@@ -343,7 +414,6 @@ u, .pointiller {
 
 .margin-fin {
   margin: 4vh 0;
-  width: 35vw;
 }
 
 .logo {
@@ -418,6 +488,87 @@ u, .pointiller {
   .font-weight-resp-8 {
     font-weight: 800;
   }
+  .width-resp-auto {
+    width: auto;
+  }
+  .width-resp-5 {
+    width: 5vw;
+  }
+  .width-resp-5-cent {
+    width: 5%;
+  }
+  .width-resp-auto {
+    width: auto;
+  }
+  .width-resp-10 {
+    width: 10vw;
+  }
+  .width-resp-10-cent {
+    width: 10%;
+  }
+  .width-resp-auto {
+    width: auto;
+  }
+  .width-resp-15 {
+    width: 15vw;
+  }
+  .width-resp-15-cent {
+    width: 15%;
+  }
+  .width-resp-auto {
+    width: auto;
+  }
+  .width-resp-12 {
+    width: 12vw;
+  }
+  .width-resp-12-cent {
+    width: 12%;
+  }
+  .width-resp-auto {
+    width: auto;
+  }
+  .width-resp-15 {
+    width: 15vw;
+  }
+  .width-resp-15-cent {
+    width: 15%;
+  }
+  .width-resp-auto {
+    width: auto;
+  }
+  .width-resp-17 {
+    width: 17vw;
+  }
+  .width-resp-17-cent {
+    width: 17%;
+  }
+  .width-resp-auto {
+    width: auto;
+  }
+  .width-resp-24 {
+    width: 24vw;
+  }
+  .width-resp-24-cent {
+    width: 24%;
+  }
+  .width-resp-auto {
+    width: auto;
+  }
+  .width-resp-55 {
+    width: 55vw;
+  }
+  .width-resp-55-cent {
+    width: 55%;
+  }
+  .width-resp-auto {
+    width: auto;
+  }
+  .width-resp-90 {
+    width: 90vw;
+  }
+  .width-resp-90-cent {
+    width: 90%;
+  }
   h1 {
     padding: 2vh 2vw;
   }
@@ -439,14 +590,10 @@ u, .pointiller {
   .barre {
     padding: 1vh 2vw 1vh 0;
   }
-  .bouton-navbar {
-    width: 5vw;
-  }
   .margin-header {
     margin-right: 2vw;
   }
   .premiere-div {
-    width: 24vw;
     padding-left: 9vw;
   }
   .titre-premiere-div {
@@ -458,9 +605,6 @@ u, .pointiller {
     top: 12vh;
     right: 8vw;
     position: absolute;
-  }
-  .contenue-deuxieme-div {
-    width: 55vw;
   }
   .div-blog-fin {
     margin: auto;
@@ -477,7 +621,6 @@ u, .pointiller {
     margin-top: 3vw;
     padding-left: 2vw;
     text-align: end;
-    width: 12vw;
   }
   .nom:after {
     content: "JANE DOE";
@@ -490,46 +633,27 @@ u, .pointiller {
     text-align: initial;
     line-height: 3vh;
   }
-  .fin-deuxieme-div {
-    width: 90%;
-  }
   .ligne-blog {
     order: 1;
-    width: 15vw;
   }
   .bouton {
     padding: 1vw;
-    width: auto;
   }
   .bouton-retour {
     padding: 1vw;
-    width: auto;
     margin-right: 1vw;
-  }
-  .bouton-log-in {
-    width: 17vw;
   }
   .navbar {
     padding-top: 6vh;
-  }
-  .barre-div {
-    width: auto;
-  }
-  .margin-fin {
-    width: 10vw;
   }
   .texte-navbar {
     padding-left: 3vw;
   }
   .champs-recherche {
-    width: 15vw;
     padding-left: 2vw;
   }
   .div-navbar {
     padding-bottom: 6vh;
-  }
-  .titre-navbar {
-    width: 17vw;
   }
   .sous-titre-navbar {
     padding-top: initial;
