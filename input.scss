@@ -4,7 +4,9 @@ $tertiary-color : rgb(160, 160, 160);
 $title-color : #3C3B3B;
 $text-color : #646464;
 $hover-color : #2EBAAE;
-$border-color :rgba($tertiary-color, 0.3);
+$border-color : rgba($tertiary-color, 0.3);
+$transparent-color : transparent;
+$mediascreen : 700px;
 
 $font : "Raleway", Helvetica, sans-serif;
 
@@ -53,6 +55,9 @@ $font : "Raleway", Helvetica, sans-serif;
 .tertiary-color{
     color: $tertiary-color;
 }
+.transparent-color{
+    background-color: $transparent-color;
+}
 
 .hover-color:hover{
     color : $hover-color;
@@ -84,10 +89,6 @@ $font : "Raleway", Helvetica, sans-serif;
 
 .border-2px{
     border-width: 2px;
-}
-
-body{
-    margin: 0;
 }
 header{
     position: fixed;
@@ -122,7 +123,7 @@ header{
     .height-#{$taille} {
         height : $taille * 1vh;
     }
-    .height-#{$taille}-cent {
+    .height-#{$taille}-cent, .height-#{$taille}-cent-before::before {
         height : $taille * 1%;
     }
 }
@@ -136,17 +137,45 @@ header{
     .width-#{$taille} {
         width : $taille * 1vw;
     }
-    .width-#{$taille}-cent {
+    .width-#{$taille}-cent, .width-#{$taille}-cent-before::before {
         width : $taille * 1%;
+    }
+    .width-#{$taille}-em {
+        width : $taille * 1em;
     }
 }
 @include width(0);
+@include width(4);
 @include width(15);
 @include width(35);
 @include width(50);
 @include width(60);
 @include width(77);
 @include width(100);
+
+.margin-auto {
+    margin : auto;
+}
+@mixin margin($taille) {
+    .margin-t-#{$taille} {
+        margin-top : $taille * 1vh;
+    }
+    .margin-r-#{$taille} {
+        margin-right : $taille * 1vw;
+    }
+    .margin-b-#{$taille} {
+        margin-bottom : $taille * 1vh;
+    }
+    .margin-l-#{$taille} {
+        margin-left : $taille * 1vw;
+    }
+}
+@include margin(0);
+@include margin(1);
+@include margin(2);
+@include margin(4);
+@include margin(5);
+@include margin(6);
 
 
 @mixin cursor($cursor) {
@@ -170,26 +199,10 @@ header{
 h1{
     padding: 2vh;
 }
-h2{
-    margin-top: 6vh;
-}
-h3{
-    margin: 2vh 0;
-}
 u, .pointiller{
     text-decoration: underline dotted;
 }
 
-.bouton-navbar{
-    background-color: transparent;
-}
-.bouton{
-    background-color: transparent;
-    margin: 5vh 0;
-}
-.bouton-retour{
-    background-color: transparent;
-}
 .border-color{
     color: $border-color;
 }
@@ -214,15 +227,8 @@ u, .pointiller{
 .div-navbar{
     padding-bottom: 5vh;
 }
-.div-bouton-navbar{
-    margin-bottom: 2vh;
-}
-.bouton-log-in{
-    margin: 5vh 0;
-}
 .titre-navbar{
     padding-bottom: 4vh;
-    margin-top: 5vh;
 }
 .fin-titre-navbar{
     padding: initial;
@@ -252,30 +258,12 @@ u, .pointiller{
 }
 
 .grande-div{
-    border-top: transparent;
     padding-top: 10vh;
-}
-.div-blog{
-    margin-bottom: 5vh;
-}
-
-.petit-blog{
-    margin: 5vh 0;
-}
-
-.petite-image{
-    margin: 2vh;
 }
 .image-icone{
     border-radius: 20px;
-    margin: 1vw;
-    margin-top: 0;
-}
-.div-image-blog{
-    margin-top: 4vh;
 }
 .image-blog{
-    margin: auto 0;
     transition: 0.4s;
 }
 .image-blog:hover{
@@ -286,7 +274,6 @@ u, .pointiller{
     overflow: hidden;
 }
 .image-petit-blog{
-    margin: 0;
     transition: 0.4s;
 }
 .image-petit-blog:hover{
@@ -310,38 +297,20 @@ u, .pointiller{
 .espace-mot{
     word-spacing: 5px;
 }
-.texte-petit-blog{
-    margin: 0 1vw;
-}
-.margin-fin{
-    margin: 4vh 0;
-}
 
 .logo {
     border-bottom: 0;
     overflow: hidden;
     position: relative;
-    width: 4em;
 }
 .logo:before {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100px' height='100px' viewBox='0 0 100 100' preserveAspectRatio='none' zoomAndPan='disable'%3E%3Cpolygon points='0,0 100,0 100,25 50,0 0,25' style='fill:%23f4f4f4' /%3E%3Cpolygon points='0,100 100,100 100,75 50,100 0,75' style='fill:%23f4f4f4' /%3E%3C/svg%3E");
     background-size: 100% 100%;
     content: '';
-    height: 100%;
     position: absolute;
-    width: 100%;
-}
-.logo > img {
-    margin: auto;
-    width: 4.5em;
 }
 
-.margin{
-    margin-top: 2vh;
-    margin-bottom: 4vh;
-}
-
-@media screen and (min-width: 700px) {
+@media screen and (min-width: $mediascreen) {
 
     @mixin display-responsive($type) {
         .display-resp-#{$type} {
@@ -411,10 +380,10 @@ u, .pointiller{
     }
     @include font-weight-responsive(8);
 
+    .width-resp-auto {
+        width : auto;
+    }
     @mixin width-responsive($taille) {
-        .width-resp-auto {
-            width : auto;
-        }
         .width-resp-#{$taille} {
             width : $taille * 1vw;
         }
@@ -432,6 +401,31 @@ u, .pointiller{
     @include width-responsive(24);
     @include width-responsive(55);
     @include width-responsive(90);
+
+    .margin-resp-auto {
+        margin : auto;
+    }
+    @mixin margin-responsive($taille) {
+        .margin-resp-t-#{$taille} {
+            margin-top : $taille * 1vh;
+        }
+        .margin-resp-r-#{$taille} {
+            margin-right : $taille * 1vw;
+        }
+        .margin-resp-b-#{$taille} {
+            margin-bottom : $taille * 1vh;
+        }
+        .margin-resp-l-#{$taille} {
+            margin-left : $taille * 1vw;
+        }
+    }
+    @include margin-responsive(0);
+    @include margin-responsive(1);
+    @include margin-responsive(2);
+    @include margin-responsive(3);
+    @include margin-responsive(4);
+    @include margin-responsive(5);
+    @include margin-responsive(6);
 
     h1{
         padding: 2vh 2vw;
@@ -454,9 +448,6 @@ u, .pointiller{
     .barre{
         padding: 1vh 2vw 1vh 0;
     }
-    .margin-header{
-        margin-right: 2vw;
-    }
     .premiere-div{
         padding-left: 9vw;
     }
@@ -470,9 +461,6 @@ u, .pointiller{
         right: 8vw;
         position: absolute;
     }
-    .div-blog-fin{
-        margin: auto;
-    }
     .presentation-deuxieme-div{
         padding: 0 2vw 0 4vw;
     }
@@ -481,16 +469,11 @@ u, .pointiller{
         padding: initial;
     }
     .auteur-date-article{
-        margin-left: 0;
-        margin-top: 3vw;
         padding-left: 2vw;
         text-align: end;
     }
     .nom:after{
         content: "JANE DOE";
-    }
-    .div-image-blog{
-        margin: 5vh 2vw 1vh 2vw;
     }
     .texte-blog{
         padding: 2vh 3vw;
@@ -505,7 +488,6 @@ u, .pointiller{
     }
     .bouton-retour{
         padding: 1vw;
-        margin-right: 1vw;
     }
     .navbar{
         padding-top: 6vh;
