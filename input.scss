@@ -4,7 +4,7 @@ $tertiary-color : rgb(160, 160, 160);
 $title-color : #3C3B3B;
 $text-color : #646464;
 $hover-color : #2EBAAE;
-$border-color :rgba(160, 160, 160, 0.3);
+$border-color :rgba($tertiary-color, 0.3);
 
 $font : "Raleway", Helvetica, sans-serif;
 
@@ -139,7 +139,7 @@ header{
 }
 
 h1{
-    padding: 20px;
+    padding: 2vh;
 }
 h2{
     margin-top: 6vh;
@@ -160,7 +160,7 @@ u, .pointiller{
     background-color: transparent;
     height: 7vh;
     width: 77vw;
-    margin: 40px 0;
+    margin: 5vh 0;
 }
 .bouton-retour{
     background-color: transparent;
@@ -188,7 +188,7 @@ u, .pointiller{
 }
   
 .texte-navbar{
-    padding: 0 0 0 7vw;
+    padding-left: 7vw;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -200,13 +200,13 @@ u, .pointiller{
     margin-bottom: 2vh;
 }
 .bouton-log-in{
-    margin: 40px 0;
+    margin: 5vh 0;
     width: 50vw;
     height: 9vh;
 }
 .titre-navbar{
     width: 60vw;
-    padding-bottom: 2vw;
+    padding-bottom: 4vh;
     margin-top: 5vh;
 }
 .fin-titre-navbar{
@@ -220,7 +220,7 @@ u, .pointiller{
     font-family: "Font Awesome 6 Free";
     content: "\f002";
     position: absolute;
-    padding: 12px 7px;
+    padding: 13px 10px;
 }
 
 .champs-recherche{
@@ -253,12 +253,12 @@ u, .pointiller{
     margin: 5vh 0;
 }
 
-img{
-    margin: 20px;
+.petite-image{
+    margin: 2vh;
 }
 .image-icone{
     border-radius: 20px;
-    margin: 10px;
+    margin: 1vw;
     margin-top: 0;
 }
 .div-image-blog{
@@ -303,7 +303,7 @@ img{
     word-spacing: 5px;
 }
 .texte-petit-blog{
-    margin: 0 15px;
+    margin: 0 1vw;
 }
 .margin-fin{
     margin: 4vh 0;
@@ -326,7 +326,6 @@ img{
 }
 .logo > img {
     margin: auto;
-    margin-left: -0.25em;
     width: 4.5em;
 }
 
@@ -424,7 +423,7 @@ img{
         content: "ADIPISCING";
     }
     .barre{
-        padding: 2px 2vw 2px 0;
+        padding: 1vh 2vw 1vh 0;
     }
     .bouton-navbar{
         width: 5vw;
@@ -506,7 +505,7 @@ img{
         width: 10vw;
     }
     .texte-navbar{
-        padding: 0 0 0 3vw;
+        padding-left: 3vw;
     }
     .champs-recherche{
         width: 15vw;
