@@ -177,6 +177,34 @@ header{
 @include margin(5);
 @include margin(6);
 
+.padding-initial {
+    padding : initial;
+}
+
+@mixin padding($taille) {
+    .padding-t-#{$taille} {
+        padding-top : $taille * 1vh;
+    }
+    .padding-r-#{$taille} {
+        padding-right : $taille * 1vw;
+    }
+    .padding-b-#{$taille} {
+        padding-bottom : $taille * 1vh;
+    }
+    .padding-l-#{$taille} {
+        padding-left : $taille * 1vw;
+    }
+}
+@include padding(0);
+@include padding(2);
+@include padding(3);
+@include padding(4);
+@include padding(5);
+@include padding(6);
+@include padding(7);
+@include padding(10);
+@include padding(13);
+
 
 @mixin cursor($cursor) {
     .#{$cursor} {
@@ -426,6 +454,33 @@ u, .pointiller{
     @include margin-responsive(4);
     @include margin-responsive(5);
     @include margin-responsive(6);
+
+    .padding-resp-initial {
+        padding : initial;
+    }
+    
+    @mixin padding-responsive($taille) {
+        .padding-resp-t-#{$taille} {
+            padding-top : $taille * 1vh;
+        }
+        .padding-resp-r-#{$taille} {
+            padding-right : $taille * 1vw;
+        }
+        .padding-resp-b-#{$taille} {
+            padding-bottom : $taille * 1vh;
+        }
+        .padding-resp-l-#{$taille} {
+            padding-left : $taille * 1vw;
+        }
+    }
+    @include padding-responsive(0);
+    @include padding-responsive(1);
+    @include padding-responsive(2);
+    @include padding-responsive(3);
+    @include padding-responsive(4);
+    @include padding-responsive(6);
+    @include padding-responsive(9);
+    @include padding-responsive(10);
 
     h1{
         padding: 2vh 2vw;
