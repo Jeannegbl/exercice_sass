@@ -6,7 +6,11 @@ $text-color : #646464;
 $hover-color : #2EBAAE;
 $border-color : rgba($tertiary-color, 0.3);
 $transparent-color : transparent;
+
 $mediascreen : 700px;
+
+$transition : 0.4s;
+$scale : 1.1;
 
 $font : "Raleway", Helvetica, sans-serif;
 
@@ -15,7 +19,6 @@ $font : "Raleway", Helvetica, sans-serif;
         display: $type;
     }
 }
-
 @include display(block);
 @include display(flex);
 @include display(none);
@@ -25,7 +28,6 @@ $font : "Raleway", Helvetica, sans-serif;
         align-items: $type;
     }
 }
-
 @include align-items(center);
 
 @mixin justify-content($type) {
@@ -33,7 +35,6 @@ $font : "Raleway", Helvetica, sans-serif;
         justify-content: $type;
     }
 }
-
 @include justify-content(space-around);
 @include justify-content(space-between);
 @include justify-content(center);
@@ -43,7 +44,6 @@ $font : "Raleway", Helvetica, sans-serif;
         flex-direction: $type;
     }
 }
-
 @include flex-direction(column);
 
 .primary-color{
@@ -59,18 +59,67 @@ $font : "Raleway", Helvetica, sans-serif;
     background-color: $transparent-color;
 }
 
+.title-color{
+    color: $title-color;
+}
+.text-color{
+    color: $text-color;
+}
+.font{
+    font-family: $font;
+}
+.text-align-center{
+    text-align: center;
+}
+
+.letter-spacing{
+    letter-spacing: 4px;
+}
+.word-spacing{
+    word-spacing: 5px;
+}
+
+.index{
+    z-index: 1;
+}
+
 .hover-color:hover{
     color : $hover-color;
 }
-.border-hover-color:hover{
+.border-hover-color:hover, .border-focus-color:focus{
     border-color: $hover-color;
 }
 
 .border-none{
     border: none;
 }
-.border{
+.border, .champs-recherche:focus{
     border: 1px solid $border-color;
+}
+.border-color{
+    color: $border-color;
+}
+
+.decoration-underline-dotted{
+    text-decoration: underline dotted;
+}
+.decoration-none{
+    text-decoration: none;
+}
+
+.transition{
+    transition: $transition;
+}
+.transform:hover{
+    transform: scale($scale);
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.border-radius-20{
+    border-radius: 20px;
 }
 
 @mixin border($direction) {
@@ -78,7 +127,6 @@ $font : "Raleway", Helvetica, sans-serif;
         border-#{$direction} : 1px solid $border-color;
     }
 }
-
 @include border(top);
 @include border(bottom);
 @include border(left);
@@ -86,19 +134,8 @@ $font : "Raleway", Helvetica, sans-serif;
 .border-bottom-dotted{
     border-bottom: 1px dotted $border-color;
 }
-
 .border-2px{
     border-width: 2px;
-}
-header{
-    position: fixed;
-    z-index: 1;
-}
-.font{
-    font-family: $font;
-}
-.text-align-center{
-    text-align: center;
 }
 
 @mixin font-size($taille) {
@@ -220,8 +257,6 @@ header{
 @include padding(10);
 @include padding(13);
 
-
-
 @mixin cursor($cursor) {
     .#{$cursor} {
         cursor: $cursor;
@@ -233,99 +268,44 @@ header{
 }
 @include cursor(pointer);
 
-.title-color{
-    color: $title-color;
+@mixin line-height($taille) {
+    .line-height-#{$taille} {
+        line-height: $taille *0.1vh;
+    }
 }
-.text-color{
-    color: $text-color;
-}
+@include line-height(35);
+@include line-height(40);
 
-u, .pointiller{
-    text-decoration: underline dotted;
-}
-
-.border-color{
-    color: $border-color;
-}
-
-.navbar{
-    z-index: 1;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-  
-.texte-navbar{
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-
-.logo-recherche:before{
-    font-family: "Font Awesome 6 Free";
-    content: "\f002";
+.position-absolute:before{
     position: absolute;
 }
+@mixin position($statut) {
+    .position-#{$statut} {
+        position: $statut;
+    }
+}
+@include position(fixed);
+@include position(relative);
 
+@mixin right($position){
+    .right-#{$position}{
+        right: $position *1vw;
+    }
+}
+@include right(0);
 
-.champs-recherche:focus{
-    outline: none;
-    border: 1px solid;
-    box-shadow: inset 0 0 0 1px $hover-color;
-}
-.border-focus-color:focus{
-    border-color: $hover-color;
-}
-
-
-.image-icone{
-    border-radius: 20px;
-}
-.image-blog{
-    transition: 0.4s;
-}
-.image-blog:hover{
-    transform: scale(1.1);
-}
-
-.div-hidden{
-    overflow: hidden;
-}
-.image-petit-blog{
-    transition: 0.4s;
-}
-.image-petit-blog:hover{
-    transform: scale(1.1);
-}
-.texte-blog{
-    line-height: 4vh;
-}
-.texte-about{
-    line-height: 3.5vh;
-}
-.texte-titre{
-    line-height: 4vh;
-}
-.espace-lettre{
-    letter-spacing: 4px;
-}
-.espace-mot{
-    word-spacing: 5px;
-}
-
-.logo {
-    border-bottom: 0;
-    overflow: hidden;
-    position: relative;
-}
-.logo:before {
+.logo:before{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100px' height='100px' viewBox='0 0 100 100' preserveAspectRatio='none' zoomAndPan='disable'%3E%3Cpolygon points='0,0 100,0 100,25 50,0 0,25' style='fill:%23f4f4f4' /%3E%3Cpolygon points='0,100 100,100 100,75 50,100 0,75' style='fill:%23f4f4f4' /%3E%3C/svg%3E");
     background-size: 100% 100%;
     content: '';
-    position: absolute;
+}
+.logo-recherche:before{
+    font-family: "Font Awesome 6 Free";
+    content: "\f002";
+}
+.champs-recherche:focus{
+    outline: none;
+    box-shadow: inset 0 0 0 1px $hover-color;
 }
 
 @media screen and (min-width: $mediascreen) {
@@ -476,6 +456,35 @@ u, .pointiller{
     @include padding-responsive(9);
     @include padding-responsive(10);
 
+    @mixin line-height-responsive($taille) {
+        .line-height-resp-#{$taille} {
+            line-height: $taille * 0.1vh;
+        }
+    }
+    @include line-height-responsive(30);
+    @include line-height-responsive(40);
+
+    @mixin position-responsive($statut){
+        .position-resp-#{$statut}{
+            position: $statut;
+        }
+    }
+    @include position-responsive(absolute);
+
+    @mixin top-responsive($position){
+        .top-resp-#{$position}{
+            top: $position *1vh;
+        }
+    }
+    @include top-responsive(12);
+
+    @mixin right-responsive($position){
+        .right-resp-#{$position}{
+            right: $position *1vw;
+        }
+    }
+    @include right-responsive(8);
+
     .lorem:after{
         content: 'LOREM';
     }
@@ -491,19 +500,8 @@ u, .pointiller{
     .adipiscing:after{
         content: "ADIPISCING";
     }
-    .titre-premiere-div{
-        line-height: 4vh;
-    }
-    .deuxieme-div{
-        top: 12vh;
-        right: 8vw;
-        position: absolute;
-    }
     .nom:after{
         content: "JANE DOE";
-    }
-    .texte-blog{
-        line-height: 3vh;
     }
     .ligne-blog{
         order: 1;
