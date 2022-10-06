@@ -243,27 +243,13 @@ u, .pointiller{
     right: 0;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 3vh;
 }
   
 .texte-navbar{
-    padding-left: 7vw;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.div-navbar{
-    padding-bottom: 5vh;
-}
-.titre-navbar{
-    padding-bottom: 4vh;
-}
-.fin-titre-navbar{
-    padding: initial;
-}
-.sous-titre-navbar{
-    padding-top: 2vh;
-}
 
 .logo-recherche:before{
     font-family: "Font Awesome 6 Free";
@@ -272,9 +258,6 @@ u, .pointiller{
     padding: 13px 10px;
 }
 
-.champs-recherche{
-    padding-left: 6vw;
-}
 
 .champs-recherche:focus{
     outline: none;
@@ -285,9 +268,7 @@ u, .pointiller{
     border-color: $hover-color;
 }
 
-.grande-div{
-    padding-top: 10vh;
-}
+
 .image-icone{
     border-radius: 20px;
 }
@@ -315,7 +296,6 @@ u, .pointiller{
     line-height: 3.5vh;
 }
 .texte-titre{
-    padding: 0 10vw;
     text-align: center;
     line-height: 4vh;
 }
@@ -503,11 +483,7 @@ u, .pointiller{
     .barre{
         padding: 1vh 2vw 1vh 0;
     }
-    .premiere-div{
-        padding-left: 9vw;
-    }
     .titre-premiere-div{
-        padding: initial;
         text-align: start;
         line-height: 4vh;
     }
@@ -521,10 +497,8 @@ u, .pointiller{
     }
     .texte-titre{
         text-align: initial;
-        padding: initial;
     }
     .auteur-date-article{
-        padding-left: 2vw;
         text-align: end;
     }
     .nom:after{
@@ -543,20 +517,5 @@ u, .pointiller{
     }
     .bouton-retour{
         padding: 1vw;
-    }
-    .navbar{
-        padding-top: 6vh;
-    }
-    .texte-navbar{
-        padding-left: 3vw;
-    }
-    .champs-recherche{
-        padding-left: 2vw;
-    }
-    .div-navbar{
-        padding-bottom: 6vh;
-    }
-    .sous-titre-navbar{
-        padding-top: initial;
     }
   }
