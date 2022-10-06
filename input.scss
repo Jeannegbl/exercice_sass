@@ -97,6 +97,9 @@ header{
 .font{
     font-family: $font;
 }
+.text-align-center{
+    text-align: center;
+}
 
 @mixin font-size($taille) {
     .font-size-#{$taille} {
@@ -194,6 +197,18 @@ header{
     .padding-l-#{$taille} {
         padding-left : $taille * 1vw;
     }
+    .padding-t-#{$taille}-px::before {
+        padding-top : $taille * 1px;
+    }
+    .padding-r-#{$taille}-px::before {
+        padding-right : $taille * 1px;
+    }
+    .padding-b-#{$taille}-px::before {
+        padding-bottom : $taille * 1px;
+    }
+    .padding-l-#{$taille}-px::before {
+        padding-left : $taille * 1px;
+    }
 }
 @include padding(0);
 @include padding(2);
@@ -204,6 +219,7 @@ header{
 @include padding(7);
 @include padding(10);
 @include padding(13);
+
 
 
 @mixin cursor($cursor) {
@@ -224,9 +240,6 @@ header{
     color: $text-color;
 }
 
-h1{
-    padding: 2vh;
-}
 u, .pointiller{
     text-decoration: underline dotted;
 }
@@ -255,7 +268,6 @@ u, .pointiller{
     font-family: "Font Awesome 6 Free";
     content: "\f002";
     position: absolute;
-    padding: 13px 10px;
 }
 
 
@@ -289,14 +301,12 @@ u, .pointiller{
     transform: scale(1.1);
 }
 .texte-blog{
-    padding: 2vh 10vw;
     line-height: 4vh;
 }
 .texte-about{
     line-height: 3.5vh;
 }
 .texte-titre{
-    text-align: center;
     line-height: 4vh;
 }
 .espace-lettre{
@@ -362,6 +372,10 @@ u, .pointiller{
 
     .border-resp{
         border: 1px solid $border-color;
+    }
+
+    .text-align-resp-initial{
+        text-align: initial;
     }
     
     @mixin border-responsive($direction) {
@@ -462,9 +476,6 @@ u, .pointiller{
     @include padding-responsive(9);
     @include padding-responsive(10);
 
-    h1{
-        padding: 2vh 2vw;
-    }
     .lorem:after{
         content: 'LOREM';
     }
@@ -480,11 +491,7 @@ u, .pointiller{
     .adipiscing:after{
         content: "ADIPISCING";
     }
-    .barre{
-        padding: 1vh 2vw 1vh 0;
-    }
     .titre-premiere-div{
-        text-align: start;
         line-height: 4vh;
     }
     .deuxieme-div{
@@ -492,30 +499,13 @@ u, .pointiller{
         right: 8vw;
         position: absolute;
     }
-    .presentation-deuxieme-div{
-        padding: 0 2vw 0 4vw;
-    }
-    .texte-titre{
-        text-align: initial;
-    }
-    .auteur-date-article{
-        text-align: end;
-    }
     .nom:after{
         content: "JANE DOE";
     }
     .texte-blog{
-        padding: 2vh 3vw;
-        text-align: initial;
         line-height: 3vh;
     }
     .ligne-blog{
         order: 1;
-    }
-    .bouton{
-        padding: 1vw;
-    }
-    .bouton-retour{
-        padding: 1vw;
     }
   }

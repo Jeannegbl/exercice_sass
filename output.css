@@ -91,6 +91,10 @@ header {
   font-family: "Raleway", Helvetica, sans-serif;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 .font-size-10 {
   font-size: 10px;
 }
@@ -383,6 +387,22 @@ header {
   padding-left: 0vw;
 }
 
+.padding-t-0-px::before {
+  padding-top: 0px;
+}
+
+.padding-r-0-px::before {
+  padding-right: 0px;
+}
+
+.padding-b-0-px::before {
+  padding-bottom: 0px;
+}
+
+.padding-l-0-px::before {
+  padding-left: 0px;
+}
+
 .padding-t-2 {
   padding-top: 2vh;
 }
@@ -397,6 +417,22 @@ header {
 
 .padding-l-2 {
   padding-left: 2vw;
+}
+
+.padding-t-2-px::before {
+  padding-top: 2px;
+}
+
+.padding-r-2-px::before {
+  padding-right: 2px;
+}
+
+.padding-b-2-px::before {
+  padding-bottom: 2px;
+}
+
+.padding-l-2-px::before {
+  padding-left: 2px;
 }
 
 .padding-t-3 {
@@ -415,6 +451,22 @@ header {
   padding-left: 3vw;
 }
 
+.padding-t-3-px::before {
+  padding-top: 3px;
+}
+
+.padding-r-3-px::before {
+  padding-right: 3px;
+}
+
+.padding-b-3-px::before {
+  padding-bottom: 3px;
+}
+
+.padding-l-3-px::before {
+  padding-left: 3px;
+}
+
 .padding-t-4 {
   padding-top: 4vh;
 }
@@ -429,6 +481,22 @@ header {
 
 .padding-l-4 {
   padding-left: 4vw;
+}
+
+.padding-t-4-px::before {
+  padding-top: 4px;
+}
+
+.padding-r-4-px::before {
+  padding-right: 4px;
+}
+
+.padding-b-4-px::before {
+  padding-bottom: 4px;
+}
+
+.padding-l-4-px::before {
+  padding-left: 4px;
 }
 
 .padding-t-5 {
@@ -447,6 +515,22 @@ header {
   padding-left: 5vw;
 }
 
+.padding-t-5-px::before {
+  padding-top: 5px;
+}
+
+.padding-r-5-px::before {
+  padding-right: 5px;
+}
+
+.padding-b-5-px::before {
+  padding-bottom: 5px;
+}
+
+.padding-l-5-px::before {
+  padding-left: 5px;
+}
+
 .padding-t-6 {
   padding-top: 6vh;
 }
@@ -461,6 +545,22 @@ header {
 
 .padding-l-6 {
   padding-left: 6vw;
+}
+
+.padding-t-6-px::before {
+  padding-top: 6px;
+}
+
+.padding-r-6-px::before {
+  padding-right: 6px;
+}
+
+.padding-b-6-px::before {
+  padding-bottom: 6px;
+}
+
+.padding-l-6-px::before {
+  padding-left: 6px;
 }
 
 .padding-t-7 {
@@ -479,6 +579,22 @@ header {
   padding-left: 7vw;
 }
 
+.padding-t-7-px::before {
+  padding-top: 7px;
+}
+
+.padding-r-7-px::before {
+  padding-right: 7px;
+}
+
+.padding-b-7-px::before {
+  padding-bottom: 7px;
+}
+
+.padding-l-7-px::before {
+  padding-left: 7px;
+}
+
 .padding-t-10 {
   padding-top: 10vh;
 }
@@ -493,6 +609,22 @@ header {
 
 .padding-l-10 {
   padding-left: 10vw;
+}
+
+.padding-t-10-px::before {
+  padding-top: 10px;
+}
+
+.padding-r-10-px::before {
+  padding-right: 10px;
+}
+
+.padding-b-10-px::before {
+  padding-bottom: 10px;
+}
+
+.padding-l-10-px::before {
+  padding-left: 10px;
 }
 
 .padding-t-13 {
@@ -511,6 +643,22 @@ header {
   padding-left: 13vw;
 }
 
+.padding-t-13-px::before {
+  padding-top: 13px;
+}
+
+.padding-r-13-px::before {
+  padding-right: 13px;
+}
+
+.padding-b-13-px::before {
+  padding-bottom: 13px;
+}
+
+.padding-l-13-px::before {
+  padding-left: 13px;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -526,10 +674,6 @@ header {
 
 .text-color {
   color: #646464;
-}
-
-h1 {
-  padding: 2vh;
 }
 
 u, .pointiller {
@@ -559,7 +703,6 @@ u, .pointiller {
   font-family: "Font Awesome 6 Free";
   content: "\f002";
   position: absolute;
-  padding: 13px 10px;
 }
 
 .champs-recherche:focus {
@@ -597,7 +740,6 @@ u, .pointiller {
 }
 
 .texte-blog {
-  padding: 2vh 10vw;
   line-height: 4vh;
 }
 
@@ -606,7 +748,6 @@ u, .pointiller {
 }
 
 .texte-titre {
-  text-align: center;
   line-height: 4vh;
 }
 
@@ -661,6 +802,9 @@ u, .pointiller {
   }
   .border-resp {
     border: 1px solid rgba(160, 160, 160, 0.3);
+  }
+  .text-align-resp-initial {
+    text-align: initial;
   }
   .border-resp-right {
     border-right: 1px solid rgba(160, 160, 160, 0.3);
@@ -920,9 +1064,6 @@ u, .pointiller {
   .padding-resp-l-10 {
     padding-left: 10vw;
   }
-  h1 {
-    padding: 2vh 2vw;
-  }
   .lorem:after {
     content: "LOREM";
   }
@@ -938,11 +1079,7 @@ u, .pointiller {
   .adipiscing:after {
     content: "ADIPISCING";
   }
-  .barre {
-    padding: 1vh 2vw 1vh 0;
-  }
   .titre-premiere-div {
-    text-align: start;
     line-height: 4vh;
   }
   .deuxieme-div {
@@ -950,31 +1087,14 @@ u, .pointiller {
     right: 8vw;
     position: absolute;
   }
-  .presentation-deuxieme-div {
-    padding: 0 2vw 0 4vw;
-  }
-  .texte-titre {
-    text-align: initial;
-  }
-  .auteur-date-article {
-    text-align: end;
-  }
   .nom:after {
     content: "JANE DOE";
   }
   .texte-blog {
-    padding: 2vh 3vw;
-    text-align: initial;
     line-height: 3vh;
   }
   .ligne-blog {
     order: 1;
-  }
-  .bouton {
-    padding: 1vw;
-  }
-  .bouton-retour {
-    padding: 1vw;
   }
 }
 
