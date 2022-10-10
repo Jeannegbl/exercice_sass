@@ -15,7 +15,7 @@ $scale : 1.1;
 $font : "Raleway", Helvetica, sans-serif;
 
 @mixin display($type) {
-    .display-#{$type} {
+    .d-#{$type} {
         display: $type;
     }
 }
@@ -24,14 +24,14 @@ $font : "Raleway", Helvetica, sans-serif;
 @include display(none);
 
 @mixin align-items($type) {
-    .align-items-#{$type} {
+    .al-#{$type} {
         align-items: $type;
     }
 }
 @include align-items(center);
 
 @mixin justify-content($type) {
-    .justify-content-#{$type} {
+    .jc-#{$type} {
         justify-content: $type;
     }
 }
@@ -40,7 +40,7 @@ $font : "Raleway", Helvetica, sans-serif;
 @include justify-content(center);
 
 @mixin flex-direction($type) {
-    .flex-direction-#{$type} {
+    .fd-#{$type} {
         flex-direction: $type;
     }
 }
@@ -83,28 +83,25 @@ $font : "Raleway", Helvetica, sans-serif;
     z-index: 1;
 }
 
-.hover-color:hover{
+.hov-color:hover{
     color : $hover-color;
 }
-.border-hover-color:hover, .border-focus-color:focus{
+.b-hov-color:hover, .b-focus-color:focus{
     border-color: $hover-color;
 }
 
-.border-none{
+.b-none{
     border: none;
 }
-.border, .champs-recherche:focus{
+.b, .champs-recherche:focus{
     border: 1px solid $border-color;
 }
-.border-color{
+.b-color{
     color: $border-color;
 }
 
 .decoration-underline-dotted{
     text-decoration: underline dotted;
-}
-.decoration-none{
-    text-decoration: none;
 }
 
 .transition{
@@ -117,13 +114,16 @@ $font : "Raleway", Helvetica, sans-serif;
 .overflow-hidden{
     overflow: hidden;
 }
+.overflow-x-hidden{
+    overflow-x: hidden;
+}
 
-.border-radius-20{
+.b-radius-20{
     border-radius: 20px;
 }
 
 @mixin border($direction) {
-    .border-#{$direction} {
+    .b-#{$direction} {
         border-#{$direction} : 1px solid $border-color;
     }
 }
@@ -131,15 +131,15 @@ $font : "Raleway", Helvetica, sans-serif;
 @include border(bottom);
 @include border(left);
 
-.border-bottom-dotted{
+.b-bottom-dotted{
     border-bottom: 1px dotted $border-color;
 }
-.border-2px{
+.b-2px{
     border-width: 2px;
 }
 
 @mixin font-size($taille) {
-    .font-size-#{$taille} {
+    .fs-#{$taille} {
         font-size : $taille * 1px;
     }
 }
@@ -150,7 +150,7 @@ $font : "Raleway", Helvetica, sans-serif;
 @include font-size(20);
 
 @mixin font-weight($taille) {
-    .font-weight-#{$taille} {
+    .fw-#{$taille} {
         font-weight : $taille * 100;
     }
 }
@@ -160,10 +160,10 @@ $font : "Raleway", Helvetica, sans-serif;
 @include font-weight(9);
 
 @mixin height($taille) {
-    .height-#{$taille} {
+    .h-#{$taille} {
         height : $taille * 1vh;
     }
-    .height-#{$taille}-cent, .height-#{$taille}-cent-before::before {
+    .h-#{$taille}-cent, .h-#{$taille}-cent-before::before {
         height : $taille * 1%;
     }
 }
@@ -174,13 +174,13 @@ $font : "Raleway", Helvetica, sans-serif;
 @include height(100);
 
 @mixin width($taille) {
-    .width-#{$taille} {
+    .w-#{$taille} {
         width : $taille * 1vw;
     }
-    .width-#{$taille}-cent, .width-#{$taille}-cent-before::before {
+    .w-#{$taille}-cent, .w-#{$taille}-cent-before::before {
         width : $taille * 1%;
     }
-    .width-#{$taille}-em {
+    .w-#{$taille}-em {
         width : $taille * 1em;
     }
 }
@@ -193,20 +193,20 @@ $font : "Raleway", Helvetica, sans-serif;
 @include width(77);
 @include width(100);
 
-.margin-auto {
+.m-auto {
     margin : auto;
 }
 @mixin margin($taille) {
-    .margin-t-#{$taille} {
+    .m-t-#{$taille} {
         margin-top : $taille * 1vh;
     }
-    .margin-r-#{$taille} {
+    .m-r-#{$taille} {
         margin-right : $taille * 1vw;
     }
-    .margin-b-#{$taille} {
+    .m-b-#{$taille} {
         margin-bottom : $taille * 1vh;
     }
-    .margin-l-#{$taille} {
+    .m-l-#{$taille} {
         margin-left : $taille * 1vw;
     }
 }
@@ -217,33 +217,33 @@ $font : "Raleway", Helvetica, sans-serif;
 @include margin(5);
 @include margin(6);
 
-.padding-initial {
+.p-initial {
     padding : initial;
 }
 
 @mixin padding($taille) {
-    .padding-t-#{$taille} {
+    .p-t-#{$taille} {
         padding-top : $taille * 1vh;
     }
-    .padding-r-#{$taille} {
+    .p-r-#{$taille} {
         padding-right : $taille * 1vw;
     }
-    .padding-b-#{$taille} {
+    .p-b-#{$taille} {
         padding-bottom : $taille * 1vh;
     }
-    .padding-l-#{$taille} {
+    .p-l-#{$taille} {
         padding-left : $taille * 1vw;
     }
-    .padding-t-#{$taille}-px::before {
+    .p-t-#{$taille}-px::before {
         padding-top : $taille * 1px;
     }
-    .padding-r-#{$taille}-px::before {
+    .p-r-#{$taille}-px::before {
         padding-right : $taille * 1px;
     }
-    .padding-b-#{$taille}-px::before {
+    .p-b-#{$taille}-px::before {
         padding-bottom : $taille * 1px;
     }
-    .padding-l-#{$taille}-px::before {
+    .p-l-#{$taille}-px::before {
         padding-left : $taille * 1px;
     }
 }
@@ -261,7 +261,7 @@ $font : "Raleway", Helvetica, sans-serif;
     .#{$cursor} {
         cursor: $cursor;
     }
-    .hover-#{$cursor}:hover {
+    .hov-#{$cursor}:hover {
         cursor: $cursor;
         text-decoration: none;
     }
@@ -269,18 +269,18 @@ $font : "Raleway", Helvetica, sans-serif;
 @include cursor(pointer);
 
 @mixin line-height($taille) {
-    .line-height-#{$taille} {
+    .lh-#{$taille} {
         line-height: $taille *0.1vh;
     }
 }
 @include line-height(35);
 @include line-height(40);
 
-.position-absolute:before{
+.pos-absolute:before{
     position: absolute;
 }
 @mixin position($statut) {
-    .position-#{$statut} {
+    .pos-#{$statut} {
         position: $statut;
     }
 }
@@ -311,7 +311,7 @@ $font : "Raleway", Helvetica, sans-serif;
 @media screen and (min-width: $mediascreen) {
 
     @mixin display-responsive($type) {
-        .display-resp-#{$type} {
+        .d-resp-#{$type} {
             display: $type;
         }
     }
@@ -320,7 +320,7 @@ $font : "Raleway", Helvetica, sans-serif;
     @include display-responsive(flex);
 
     @mixin align-items-responsive($type) {
-        .align-items-resp-#{$type} {
+        .al-resp-#{$type} {
             align-items: $type;
         }
     }
@@ -330,7 +330,7 @@ $font : "Raleway", Helvetica, sans-serif;
     @include align-items-responsive(end);
     
     @mixin justify-content-responsive($type) {
-        .justify-content-resp-#{$type} {
+        .jc-resp-#{$type} {
             justify-content: $type;
         }
     }
@@ -338,7 +338,7 @@ $font : "Raleway", Helvetica, sans-serif;
     @include justify-content-responsive(space-between);
 
     @mixin flex-direction-responsive($type) {
-        .flex-direction-resp-#{$type} {
+        .fd-resp-#{$type} {
             flex-direction: $type;
         }
     }
@@ -346,11 +346,11 @@ $font : "Raleway", Helvetica, sans-serif;
     @include flex-direction-responsive(column);
     @include flex-direction-responsive(row);
 
-    .border-none-resp{
+    .b-none-r{
         border: none;
     }
 
-    .border-resp{
+    .b-r{
         border: 1px solid $border-color;
     }
 
@@ -359,7 +359,7 @@ $font : "Raleway", Helvetica, sans-serif;
     }
     
     @mixin border-responsive($direction) {
-        .border-resp-#{$direction} {
+        .b-resp-#{$direction} {
             border-#{$direction} : 1px solid $border-color;
         }
     }
@@ -368,7 +368,7 @@ $font : "Raleway", Helvetica, sans-serif;
     @include border-responsive(bottom);
 
     @mixin font-size-responsive($taille) {
-        .font-size-resp-#{$taille} {
+        .fs-resp-#{$taille} {
             font-size : $taille * 1px;
         }
     }
@@ -376,20 +376,20 @@ $font : "Raleway", Helvetica, sans-serif;
     @include font-size-responsive(15);
 
     @mixin font-weight-responsive($taille) {
-        .font-weight-resp-#{$taille} {
+        .fw-resp-#{$taille} {
             font-weight : $taille * 100;
         }
     }
     @include font-weight-responsive(8);
 
-    .width-resp-auto {
+    .w-resp-auto {
         width : auto;
     }
     @mixin width-responsive($taille) {
-        .width-resp-#{$taille} {
+        .w-resp-#{$taille} {
             width : $taille * 1vw;
         }
-        .width-resp-#{$taille}-cent {
+        .w-resp-#{$taille}-cent {
             width : $taille * 1%;
         }
 
@@ -404,20 +404,20 @@ $font : "Raleway", Helvetica, sans-serif;
     @include width-responsive(55);
     @include width-responsive(90);
 
-    .margin-resp-auto {
+    .m-resp-auto {
         margin : auto;
     }
     @mixin margin-responsive($taille) {
-        .margin-resp-t-#{$taille} {
+        .m-resp-t-#{$taille} {
             margin-top : $taille * 1vh;
         }
-        .margin-resp-r-#{$taille} {
+        .m-resp-r-#{$taille} {
             margin-right : $taille * 1vw;
         }
-        .margin-resp-b-#{$taille} {
+        .m-resp-b-#{$taille} {
             margin-bottom : $taille * 1vh;
         }
-        .margin-resp-l-#{$taille} {
+        .m-resp-l-#{$taille} {
             margin-left : $taille * 1vw;
         }
     }
@@ -429,21 +429,21 @@ $font : "Raleway", Helvetica, sans-serif;
     @include margin-responsive(5);
     @include margin-responsive(6);
 
-    .padding-resp-initial {
+    .p-resp-initial {
         padding : initial;
     }
     
     @mixin padding-responsive($taille) {
-        .padding-resp-t-#{$taille} {
+        .p-resp-t-#{$taille} {
             padding-top : $taille * 1vh;
         }
-        .padding-resp-r-#{$taille} {
+        .p-resp-r-#{$taille} {
             padding-right : $taille * 1vw;
         }
-        .padding-resp-b-#{$taille} {
+        .p-resp-b-#{$taille} {
             padding-bottom : $taille * 1vh;
         }
-        .padding-resp-l-#{$taille} {
+        .p-resp-l-#{$taille} {
             padding-left : $taille * 1vw;
         }
     }
@@ -457,7 +457,7 @@ $font : "Raleway", Helvetica, sans-serif;
     @include padding-responsive(10);
 
     @mixin line-height-responsive($taille) {
-        .line-height-resp-#{$taille} {
+        .lh-resp-#{$taille} {
             line-height: $taille * 0.1vh;
         }
     }
@@ -465,7 +465,7 @@ $font : "Raleway", Helvetica, sans-serif;
     @include line-height-responsive(40);
 
     @mixin position-responsive($statut){
-        .position-resp-#{$statut}{
+        .pos-resp-#{$statut}{
             position: $statut;
         }
     }
@@ -503,7 +503,7 @@ $font : "Raleway", Helvetica, sans-serif;
     .nom:after{
         content: "JANE DOE";
     }
-    .ligne-blog{
+    .order-1{
         order: 1;
     }
   }
