@@ -446,6 +446,38 @@
   padding-left: 0px;
 }
 
+.p-t-1 {
+  padding-top: 1vh;
+}
+
+.p-r-1 {
+  padding-right: 1vw;
+}
+
+.p-b-1 {
+  padding-bottom: 1vh;
+}
+
+.p-l-1 {
+  padding-left: 1vw;
+}
+
+.p-t-1-px::before {
+  padding-top: 1px;
+}
+
+.p-r-1-px::before {
+  padding-right: 1px;
+}
+
+.p-b-1-px::before {
+  padding-bottom: 1px;
+}
+
+.p-l-1-px::before {
+  padding-left: 1px;
+}
+
 .p-t-2 {
   padding-top: 2vh;
 }

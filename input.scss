@@ -248,6 +248,7 @@ $font : "Raleway", Helvetica, sans-serif;
     }
 }
 @include padding(0);
+@include padding(1);
 @include padding(2);
 @include padding(3);
 @include padding(4);
